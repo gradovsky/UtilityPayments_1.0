@@ -1,0 +1,12 @@
+.formContainer {
+    display: flex;
+    flex-flow: row wrap
+}
+
+.style {
+    display: flex;
+    justify-content: center
+}
+.marginTop {
+    margin-top: 60px;
+}

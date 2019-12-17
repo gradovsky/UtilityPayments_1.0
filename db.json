@@ -1,0 +1,14 @@
+{
+  "energy": [],
+  "users": [
+    {
+      "id": 1,
+      "userName": "Дмитро",
+      "daysPresent": "",
+      "priceForEnergy": "",
+      "consta": "",
+      "toPay": ""
+    }
+  ],
+  "receipt": []
+}
