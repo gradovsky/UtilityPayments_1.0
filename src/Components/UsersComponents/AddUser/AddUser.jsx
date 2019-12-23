@@ -33,7 +33,7 @@ class AddUser extends React.Component {
                                value={this.props.toPay} onChange={this.props.onChangeToPay}/>
 
 
-                    <Button variant="contained" color="primary" onClick={this.props.saveEnergy}>Додати
+                    <Button variant="contained" color="primary" onClick={this.props.saveUser}>Додати
                         резидент</Button>
                 </form>
             </div>

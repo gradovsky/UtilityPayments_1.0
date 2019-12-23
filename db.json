@@ -1,14 +1,35 @@
 {
-  "energy": [],
-  "users": [
+  "energy": [
     {
       "id": 1,
-      "userName": "Дмитро",
+      "currentValue": "76668",
+      "lastValue": "75514",
+      "energyUsedKw": 1154,
+      "energyPrice": 1938.72,
+      "countDaysInMonth": "30",
+      "energyPriceOneDay": "64.624"
+    }
+  ],
+  "users": [
+    {
+      "userName": "",
       "daysPresent": "",
       "priceForEnergy": "",
       "consta": "",
-      "toPay": ""
+      "toPay": "",
+      "id": 1
     }
   ],
-  "receipt": []
+  "receipt": [
+    {
+      "id": 1,
+      "centralHeating": "3036.22",
+      "keepingTheBuilding": "613.31",
+      "water": "67.65",
+      "internet": "100",
+      "cleaning": "900",
+      "cleaningProducts": "150",
+      "totalAmount": 4767.18
+    }
+  ]
 }

@@ -13,8 +13,7 @@ class EditEnergyContainer extends React.Component {
             lastValue: '',
             energyUsedKw: '',
             energyPrice: '',
-            countDaysInMonth: '',
-            energyPriceOneDay: ''
+
         };
         this.onChangeEnergyUsedKw = this.onChangeEnergyUsedKw.bind(this);
         this.onChangeEnergyPrice = this.onChangeEnergyPrice.bind(this);
@@ -76,16 +75,13 @@ class EditEnergyContainer extends React.Component {
     }
 
     render() {
-
         console.log(this.state);
-
         return (
             <EditEnergy currentValue={this.state.currentValue}
                         lastValue={this.state.lastValue}
                         energyUsedKw={this.state.energyUsedKw}
                         energyPrice={this.state.energyPrice}
-                        countDaysInMonth={this.state.countDaysInMonth}
-                        energyPriceOneDay={this.state.energyPriceOneDay}
+
                         onChangeEnergyUsedKw={this.onChangeEnergyUsedKw}
                         onChangeEnergyPrice={this.onChangeEnergyPrice}
                         onChangeEnergyPriceOneDay={this.onChangeEnergyPriceOneDay}

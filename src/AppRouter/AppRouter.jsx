@@ -4,7 +4,6 @@ import AddEnergyContainer from "../Components/EnergyComponents/AddEnergy/AddEner
 import EditEnergyContainer from "../Components/EnergyComponents/EditEnergy/EditEnergyContainer";
 import AddUserContainer from "../Components/UsersComponents/AddUser/AddUserContainer";
 import EditUserContainer from "../Components/UsersComponents/EditUser/EditUserContainer";
-import AppBody from "../Components/AppComponents/AppBody";
 import AppCalculations from "../Components/AppComponents/AppCalculations";
 import AddReceiptContainer from "../Components/ConstComponents/AddReceipt/AddReceiptContainer";
 import EditReceiptContainer from "../Components/ConstComponents/EditReceipt/EditReceiptContainer";
@@ -17,7 +16,7 @@ const AppRouter = (props) => {
         <div>
             <HashRouter>
                 <Route path="/" exact component={ListOfUsersContainer}/>
-                <Route path="/app" exact component={ListOfUsersContainer}/>
+                {/*<Route path="/app" exact component={ListOfUsersContainer}/>*/}
                 <Route path="/calculations" component={AppCalculations}/>
 
                 <Route path="/add-user" component={AddUserContainer}/>

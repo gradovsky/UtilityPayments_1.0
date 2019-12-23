@@ -2,38 +2,32 @@ import React from 'react'
 import {EnergyApi} from "../../../ApiService/ApiService";
 import {connect} from "react-redux";
 import AddEnergy from "./AddEnergy";
-import {
-    addCountDaysInMonth,
-    addCurrentValue,
-    addEnergyPrice,
-    addEnergyPriceOneDay,
-    addEnergyUsedKw,
-    addLastValue
-} from "../../../redux/energy-reducer";
+import {addCurrentValue, addEnergyPrice, addEnergyUsedKw, addLastValue} from "../../../redux/energy-reducer";
 
 class AddEnergyContainer extends React.Component {
 
     constructor(props) {
         super(props);
-
+        this.state = {
+            currentValue: '',
+            lastValue: '',
+            energyUsedKw: '',
+            energyPrice: '',
+        };
         this.saveEnergy = this.saveEnergy.bind(this);
         this.onChangeCurrentValue = this.onChangeCurrentValue.bind(this);
         this.onChangeLastValue = this.onChangeLastValue.bind(this);
         this.onChangeEnergyUsedKw = this.onChangeEnergyUsedKw.bind(this);
         this.onChangeEnergyPrice = this.onChangeEnergyPrice.bind(this);
-        this.onChangeEnergyPriceOneDay = this.onChangeEnergyPriceOneDay.bind(this);
-        this.onChangeCountDaysInMonth = this.onChangeCountDaysInMonth.bind(this);
     }
 
     saveEnergy = (e) => {
         e.preventDefault();
         let energy = {
-            currentValue: this.props.currentValue,
-            lastValue: this.props.lastValue,
-            energyUsedKw: this.props.energyUsedKw,
-            energyPrice: this.props.energyPrice,
-            countDaysInMonth: this.props.countDaysInMonth,
-            energyPriceOneDay: this.props.energyPriceOneDay
+            currentValue: this.state.currentValue,
+            lastValue: this.state.lastValue,
+            energyUsedKw: this.state.energyUsedKw,
+            energyPrice: this.state.energyPrice
         };
         EnergyApi.addEnergy(energy)
             .then(res => {
@@ -52,37 +46,28 @@ class AddEnergyContainer extends React.Component {
     }
     onChangeEnergyUsedKw(e) {
         this.props.addEnergyUsedKw(e.target.value);
-        this.setState({[e.target.name]: e.target.value});
+        this.setState({[e.target.name]: this.state.currentValue - this.state.lastValue});
     }
     onChangeEnergyPrice(e){
         this.props.addEnergyPrice(e.target.value);
-        this.setState({[e.target.name]: e.target.value});
+        this.setState({[e.target.name]: this.state.energyUsedKw * 1.68});
     }
-    onChangeCountDaysInMonth(e){
-        this.props.addCountDaysInMonth(e.target.value);
-        this.setState({[e.target.name]: e.target.value});
-    }
-    onChangeEnergyPriceOneDay(e){
-        this.props.addEnergyPriceOneDay(e.target.value);
-        this.setState({[e.target.name]: e.target.value});
-    }
+
 
     render() {
-
+        console.log(this.state)
         return (
             <div>
-                <AddEnergy currentValue={this.props.currentValue}
-                           lastValue={this.props.lastValue}
-                           energyUsedKw={this.props.energyUsedKw}
-                           energyPrice={this.props.energyPrice}
-                           countDaysInMonth={this.props.countDaysInMonth}
-                           energyPriceOneDay={this.props.energyPriceOneDay}
+                <AddEnergy currentValue={this.state.currentValue}
+                           lastValue={this.state.lastValue}
+                           energyUsedKw={this.state.energyUsedKw}
+                           energyPrice={this.state.energyPrice}
+
                            onChangeCurrentValue={this.onChangeCurrentValue}
                            onChangeLastValue={this.onChangeLastValue}
                            onChangeEnergyUsedKw={this.onChangeEnergyUsedKw}
                            onChangeEnergyPrice={this.onChangeEnergyPrice}
-                           onChangeCountDaysInMonth={this.onChangeCountDaysInMonth}
-                           onChangeEnergyPriceOneDay={this.onChangeEnergyPriceOneDay}
+
                            saveEnergy={this.saveEnergy}
                 />
             </div>
@@ -97,8 +82,6 @@ export const mapStateToProps = (state) => ({
     lastValue: state.energyAdd.lastValue,
     energyUsedKw: state.energyAdd.energyUsedKw,
     energyPrice: state.energyAdd.energyPrice,
-    countDaysInMonth: state.energyAdd.countDaysInMonth,
-    energyPriceOneDay: state.energyAdd.energyPriceOneDay
 });
 
 export const mapDispatchToProps = {
@@ -106,8 +89,6 @@ export const mapDispatchToProps = {
     addLastValue,
     addEnergyUsedKw,
     addEnergyPrice,
-    addCountDaysInMonth,
-    addEnergyPriceOneDay
 };
 
 

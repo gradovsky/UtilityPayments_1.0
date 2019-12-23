@@ -27,15 +27,6 @@ class AddUserComponent extends React.Component {
                                name="energyPrice"
                                value={this.props.energyPrice} onClick={this.props.onChangeEnergyPrice}/>
 
-                    <TextField type="number" placeholder="Кількість днів в місяці" fullWidth margin="normal"
-                               name="countDaysInMonth"
-                               value={this.props.countDaysInMonth} onChange={this.props.onChangeCountDaysInMonth}/>
-
-                    <TextField type="number" placeholder="Вартість електроенергії за 1 день, грн" fullWidth
-                               margin="normal" name="energyPriceOneDay"
-                               value={this.props.energyPriceOneDay}
-                               onClick={this.props.onChangeEnergyPriceOneDay}/>
-
                     <Button variant="contained" color="primary" onClick={this.props.saveEnergy}>Зберегти
                         показники</Button>
                 </form>

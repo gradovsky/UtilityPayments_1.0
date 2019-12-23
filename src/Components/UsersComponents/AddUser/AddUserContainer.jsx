@@ -1,5 +1,5 @@
 import React from 'react'
-import {UsersApi} from "../../../ApiService/ApiService";
+import {EnergyApi, UsersApi} from "../../../ApiService/ApiService";
 import {connect} from "react-redux";
 import {addConsta, addDaysPresent, addPriceForEnergy, addToPay, addUserName} from "../../../redux/users-reducer";
 import AddUser from "./AddUser";
@@ -8,31 +8,52 @@ class AddUserContainer extends React.Component {
 
     constructor(props) {
         super(props);
-
-        this.saveEnergy = this.saveEnergy.bind(this);
+        this.state = {
+            id: '',
+            userName: '',
+            daysPresent: '',
+            priceForEnergy: '',
+            consta: '',
+            toPay: '',
+            energyPriceOneDay:''
+        };
+        this.saveUser = this.saveUser.bind(this);
         this.onChangeUserName = this.onChangeUserName.bind(this);
         this.onChangeDaysPresent = this.onChangeDaysPresent.bind(this);
         this.onChangePriceForEnergy = this.onChangePriceForEnergy.bind(this);
         this.onChangeConsta = this.onChangeConsta.bind(this);
         this.onChangeToPay = this.onChangeToPay.bind(this);
+        this.loadEnergyPriceOneDay = this.loadEnergyPriceOneDay.bind(this);
     }
 
-    saveEnergy = (e) => {
+    componentDidMount() {
+        this.loadEnergyPriceOneDay();
+    };
+
+    loadEnergyPriceOneDay() {
+        EnergyApi.fetchEnergy()
+            .then((res) => {
+                this.setState({energyPriceOneDay: res.data[0].energyPriceOneDay})
+            })
+    }
+
+    saveUser = (e) => {
         e.preventDefault();
         let user = {
-            userName: this.props.userName,
-            daysPresent: this.props.daysPresent,
-            priceForEnergy: this.props.priceForEnergy,
-            consta: this.props.consta,
-            toPay: this.props.toPay,
+            userName: this.state.userName,
+            daysPresent: this.state.daysPresent,
+            priceForEnergy: this.state.priceForEnergy,
+            consta: this.state.consta,
+            toPay: this.state.toPay
         };
         UsersApi.addUser(user)
             .then(res => {
-                this.props.history.push('/app');
+                this.props.history.push('/');
             });
     };
 
-    onChangeUserName(e) {
+
+    onChangeUserName (e) {
         this.props.addUserName(e.target.value);
         this.setState({[e.target.name]: e.target.value});
     }
@@ -43,8 +64,7 @@ class AddUserContainer extends React.Component {
     }
 
     onChangePriceForEnergy(e) {
-        this.props.addPriceForEnergy(e.target.value);
-        this.setState({[e.target.name]: this.state.daysPresent * (this.state.energyPriceOneDay / 13)});
+        this.setState({[e.target.name]: ((this.state.energyPriceOneDay / 2) * this.state.daysPresent).toFixed(3) });
     }
 
     onChangeConsta(e) {
@@ -57,23 +77,26 @@ class AddUserContainer extends React.Component {
         this.setState({[e.target.name]: e.target.value});
     }
 
-    render() {
 
+
+
+    render() {
+        console.log(this.state)
         return (
             <div>
-                <AddUser userName={this.props.userName}
-                         daysPresent={this.props.daysPresent}
-                         priceForEnergy={this.props.priceForEnergy}
-                         consta={this.props.consta}
-                         toPay={this.props.toPay}
+                <AddUser userName={this.state.userName}
+                         daysPresent={this.state.daysPresent}
+                         priceForEnergy={this.state.priceForEnergy}
+                         consta={this.state.consta}
+                         toPay={this.state.toPay}
+
 
                          onChangeUserName={this.onChangeUserName}
                          onChangeDaysPresent={this.onChangeDaysPresent}
                          onChangePriceForEnergy={this.onChangePriceForEnergy}
                          onChangeConsta={this.onChangeConsta}
                          onChangeToPay={this.onChangeToPay}
-
-                         saveEnergy={this.saveEnergy}
+                         saveUser={this.saveUser}
                 />
             </div>
         );
@@ -86,7 +109,8 @@ export const mapStateToProps = (state) => ({
     daysPresent: state.usersAdd.daysPresent,
     priceForEnergy: state.usersAdd.priceForEnergy,
     consta: state.usersAdd.consta,
-    toPay: state.usersAdd.toPay
+    toPay: state.usersAdd.toPay,
+    energyPriceOneDay: state.usersAdd.energyPriceOneDay
 });
 
 export const mapDispatchToProps = {

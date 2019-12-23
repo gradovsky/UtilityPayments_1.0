@@ -12,11 +12,12 @@ class EditReceipt extends Component {
                 <Typography variant="h4" className={s.style}>Редагувати витрати</Typography>
                 <form>
 
-                    <TextField type="number" placeholder="Поточний показник" fullWidth margin="normal"
+                    <TextField type="number" placeholder="Центральне опалення" fullWidth margin="normal"
                                name="centralHeating"
                                value={this.props.centralHeating} onChange={this.props.onChange}/>
 
-                    <TextField type="number" placeholder="Утримання будинку" fullWidth margin="normal" name="keepingTheBuilding"
+                    <TextField type="number" placeholder="Утримання будинку" fullWidth margin="normal"
+                               name="keepingTheBuilding"
                                value={this.props.keepingTheBuilding} onChange={this.props.onChange}/>
 
                     <TextField type="number" placeholder="Вода" fullWidth margin="normal"
@@ -31,6 +32,14 @@ class EditReceipt extends Component {
                                name="internet"
                                value={this.props.internet} onChange={this.props.onChange}/>
 
+                    <TextField type="number" placeholder="Засоби для прибирання" fullWidth margin="normal"
+                               name="cleaningProducts"
+                               value={this.props.cleaningProducts} onChange={this.props.onChange}/>
+
+                    <TextField type="number" placeholder="Загальна сумма" fullWidth margin="normal"
+                               name="totalAmount"
+                               value={this.props.totalAmount} onClick={this.props.onChangeTotalAmount}/>
+
                     <Button variant="contained" color="primary" onClick={this.props.saveReceipt}>Зберегти
                         витрати</Button>
                 </form>
@@ -38,7 +47,6 @@ class EditReceipt extends Component {
         );
     }
 }
-
 
 
 export default EditReceipt;

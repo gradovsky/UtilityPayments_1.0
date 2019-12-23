@@ -83,8 +83,8 @@ class EditUserContainer extends React.Component {
                       consta={this.state.consta}
                       toPay={this.state.toPay}
                       saveUser={this.saveUser}
-                      onChange={this.onChange}
 
+                      onChange={this.onChange}
                       onChangeEnergyUsedKw={this.onChangeEnergyUsedKw}
                       onChangeEnergyPrice={this.onChangeEnergyPrice}
                       onChangeEnergyPriceOneDay={this.onChangeEnergyPriceOneDay}

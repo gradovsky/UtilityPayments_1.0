@@ -3,7 +3,6 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import s from './AddReceipt.module.css'
-import TableCell from "@material-ui/core/TableCell";
 
 class AddReceipt extends React.Component {
 
@@ -36,6 +35,10 @@ class AddReceipt extends React.Component {
                     <TextField type="number" placeholder="Засоби для прибирання" fullWidth margin="normal"
                                name="cleaningProducts"
                                value={this.props.cleaningProducts} onChange={this.props.onChangeCleaningProducts}/>
+
+                    <TextField type="number" placeholder="Загальна сумма" fullWidth margin="normal"
+                               name="totalAmount"
+                               value={this.props.totalAmount} onClick={this.props.onChangeTotalAmount}/>
 
 
                     <Button variant="contained" color="primary" onClick={this.props.saveReceipt}>Зберегти

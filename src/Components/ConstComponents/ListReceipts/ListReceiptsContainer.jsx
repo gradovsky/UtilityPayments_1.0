@@ -39,7 +39,6 @@ class ListReceiptsContainer extends React.Component {
     }
 
     addReceipt() {
-        console.log(this.props.state)
         this.props.history.push('/add-receipt');
     };
 

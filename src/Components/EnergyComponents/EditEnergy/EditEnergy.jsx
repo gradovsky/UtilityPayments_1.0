@@ -5,8 +5,8 @@ import Typography from '@material-ui/core/Typography';
 import s from './EditEnergy.module.css'
 
 class EditEnergy extends Component {
-    render() {
 
+    render() {
         return (
             <div className={s.marginTop}>
                 <Typography variant="h4" className={s.style}>Редагувати показники</Typography>
@@ -27,21 +27,14 @@ class EditEnergy extends Component {
                                name="energyPrice"
                                value={this.props.energyPrice} onClick={this.props.onChangeEnergyPrice}/>
 
-                    <TextField type="number" placeholder="Кількість днів в місяці" fullWidth margin="normal"
-                               name="countDaysInMonth"
-                               value={this.props.countDaysInMonth} onChange={this.props.onChange}/>
 
-                    <TextField type="number" placeholder="Вартість електроенергії за 1 день" fullWidth
-                               margin="normal" name="energyPriceOneDay"
-                               value={this.props.energyPriceOneDay} onClick={this.props.onChangeEnergyPriceOneDay}/>
-
-                    <Button variant="contained" color="primary" onClick={this.props.saveEnergy}>Зберегти показники</Button>
+                    <Button variant="contained" color="primary" onClick={this.props.saveEnergy}>Зберегти
+                        показники</Button>
                 </form>
             </div>
         );
     }
 }
-
 
 
 export default EditEnergy;

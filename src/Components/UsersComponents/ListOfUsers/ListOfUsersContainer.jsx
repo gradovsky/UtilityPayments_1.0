@@ -8,7 +8,7 @@ class ListOfUsersContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            users: [],
+            users: []
         };
         this.deleteUser = this.deleteUser.bind(this);
         this.editUser = this.editUser.bind(this);
@@ -24,7 +24,6 @@ class ListOfUsersContainer extends React.Component {
     reloadUsersList() {
         UsersApi.fetchUsers()
             .then((res) => {
-                console.log(res.data)
                 this.setState({users: res.data})
             });
     };
@@ -41,21 +40,21 @@ class ListOfUsersContainer extends React.Component {
         this.props.history.push('/edit-user');
     }
 
-    addUser() {
-        console.log(this.props.history)
 
+    addUser() {
         this.props.history.push('/add-user');
     };
+
 
     addCalculations() {
         this.props.history.push('/calculations');
     }
 
-
     render() {
         return (
             <div>
                 <ListOfUsers state={this.state}
+                             energyPriceOneDay={this.state.energyPriceOneDay}
                              addUser={this.addUser}
                              editUser={this.editUser}
                              deleteUser={this.deleteUser}

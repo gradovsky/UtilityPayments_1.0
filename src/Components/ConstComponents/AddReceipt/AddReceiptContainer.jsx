@@ -3,9 +3,11 @@ import {ReceiptApi} from "../../../ApiService/ApiService";
 import {connect} from "react-redux";
 import {
     addCentralHeating,
-    addCleaning, addCleaningProducts,
+    addCleaning,
+    addCleaningProducts,
     addInternet,
     addKeepingTheBuilding,
+    addTotalAmount,
     addWater
 } from "../../../redux/receipt-reducer";
 import AddReceipt from "./AddReceipt";
@@ -14,6 +16,16 @@ class AddReceiptContainer extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            id: '',
+            centralHeating: '',
+            keepingTheBuilding: '',
+            water: '',
+            cleaning: '',
+            internet: '',
+            cleaningProducts: '',
+            totalAmount: ''
+        };
 
         this.saveReceipt = this.saveReceipt.bind(this);
         this.onChangeCentralHeating = this.onChangeCentralHeating.bind(this);
@@ -22,18 +34,20 @@ class AddReceiptContainer extends React.Component {
         this.onChangeCleaning = this.onChangeCleaning.bind(this);
         this.onChangeInternet = this.onChangeInternet.bind(this);
         this.onChangeCleaningProducts = this.onChangeCleaningProducts.bind(this);
+        this.onChangeTotalAmount = this.onChangeTotalAmount.bind(this);
     }
 
     saveReceipt = (e) => {
         e.preventDefault();
         let receipts = {
-            id: this.props.id,
-            centralHeating: this.props.centralHeating,
-            keepingTheBuilding: this.props.keepingTheBuilding,
-            water: this.props.water,
-            cleaning: this.props.cleaning,
-            internet: this.props.internet,
-            cleaningProducts: this.props.cleaningProducts
+            id: this.state.id,
+            centralHeating: this.state.centralHeating,
+            keepingTheBuilding: this.state.keepingTheBuilding,
+            water: this.state.water,
+            cleaning: this.state.cleaning,
+            internet: this.state.internet,
+            cleaningProducts: this.state.cleaningProducts,
+            totalAmount: this.state.totalAmount
         };
         ReceiptApi.addReceipt(receipts)
             .then(res => {
@@ -70,17 +84,25 @@ class AddReceiptContainer extends React.Component {
         this.props.addCleaningProducts(e.target.value);
         this.setState({[e.target.name]: e.target.value});
     }
+    onChangeTotalAmount(e) {
+        this.props.addTotalAmount(e.target.value);
+        this.setState({[e.target.name]: +this.state.centralHeating + +this.state.keepingTheBuilding + +this.state.water + +this.state.cleaning + +this.state.internet + +this.state.cleaningProducts});
+    }
+
+
+
 
     render() {
-
+        console.log(this.state)
         return (
             <div>
-                <AddReceipt centralHeating={this.props.centralHeating}
-                            keepingTheBuilding={this.props.keepingTheBuilding}
-                            water={this.props.water}
-                            cleaning={this.props.cleaning}
-                            internet={this.props.internet}
-                            cleaningProducts={this.props.cleaningProducts}
+                <AddReceipt centralHeating={this.state.centralHeating}
+                            keepingTheBuilding={this.state.keepingTheBuilding}
+                            water={this.state.water}
+                            cleaning={this.state.cleaning}
+                            internet={this.state.internet}
+                            cleaningProducts={this.state.cleaningProducts}
+                            totalAmount={this.state.totalAmount}
 
                             onChangeCentralHeating={this.onChangeCentralHeating}
                             onChangeKeepingTheBuilding={this.onChangeKeepingTheBuilding}
@@ -88,6 +110,7 @@ class AddReceiptContainer extends React.Component {
                             onChangeCleaning={this.onChangeCleaning}
                             onChangeInternet={this.onChangeInternet}
                             onChangeCleaningProducts={this.onChangeCleaningProducts}
+                            onChangeTotalAmount={this.onChangeTotalAmount}
                             saveReceipt={this.saveReceipt}
                 />
             </div>
@@ -102,7 +125,8 @@ export const mapStateToProps = (state) => ({
     water: state.receiptAdd.water,
     cleaning: state.receiptAdd.cleaning,
     internet: state.receiptAdd.internet,
-    cleaningProducts: state.receiptAdd.cleaningProducts
+    cleaningProducts: state.receiptAdd.cleaningProducts,
+    totalAmount: state.receiptAdd.totalAmount
 });
 
 export const mapDispatchToProps = {
@@ -111,7 +135,8 @@ export const mapDispatchToProps = {
     addWater,
     addCleaning,
     addInternet,
-    addCleaningProducts
+    addCleaningProducts,
+    addTotalAmount
 };
 
 

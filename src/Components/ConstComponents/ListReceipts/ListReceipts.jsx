@@ -30,6 +30,7 @@ class ListReceipts extends React.Component {
                             <TableCell align="center">Прибирання<br/>грн.</TableCell>
                             <TableCell align="center">Інтернет<br/>грн.</TableCell>
                             <TableCell align="center">Засоби для прибирання<br/>грн.</TableCell>
+                            <TableCell align="center">Загальна сумма<br/>грн.</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -43,6 +44,7 @@ class ListReceipts extends React.Component {
                                     <TableCell align="center">{row.cleaning}</TableCell>
                                     <TableCell align="center">{row.internet}</TableCell>
                                     <TableCell align="center">{row.cleaningProducts}</TableCell>
+                                    <TableCell align="center">{row.totalAmount}</TableCell>
                                     <TableCell align="center"
                                                onClick={() => this.props.editReceipt(row.id)}><CreateIcon/></TableCell>
                                     <TableCell align="center"
@@ -52,6 +54,7 @@ class ListReceipts extends React.Component {
                             ))}
                     </TableBody>
                 </Table>
+                <div>*Ввести данні по сумах з рахунків або чеків</div>
             </div>
         );
     }

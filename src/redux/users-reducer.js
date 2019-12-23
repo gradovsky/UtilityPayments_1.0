@@ -1,3 +1,5 @@
+import {EnergyApi} from "../ApiService/ApiService";
+
 const ADD_USER_NAME = 'ADD_USER_NAME';
 const ADD_DAY_PRESENT = 'ADD_DAY_PRESENT';
 const ADD_PRICE_FOR_ENERGY = 'ADD_PRICE_FOR_ENERGY';
@@ -11,8 +13,11 @@ const UserState = {
     daysPresent: '',
     priceForEnergy: '',
     consta: '',
-    toPay: ''
+    toPay: '',
+    energyPriceOneDay:''
 };
+
+
 
 
 const addUsersReducer = (state = UserState, action) => {
@@ -23,9 +28,12 @@ const addUsersReducer = (state = UserState, action) => {
         case ADD_DAY_PRESENT: {
             return {...state, daysPresent: action.payload}
         }
+
         case ADD_PRICE_FOR_ENERGY: {
-            return {...state, priceForEnergy: action.payload}
+            return {
+                ...state, priceForEnergy: action.payload}
         }
+
         case ADD_CONSTA: {
             return {...state, consta: action.payload}
         }
@@ -46,8 +54,7 @@ export const addPriceForEnergy = (newPriceForEnergy) => ({type: ADD_PRICE_FOR_EN
 
 export const addConsta = (newConsta) => ({type: ADD_CONSTA, payload: newConsta});
 
-
-export const addToPay = (newToPay) => ({type: ADD_TO_PAY,payload: newToPay});
+export const addToPay = (newToPay) => ({type: ADD_TO_PAY, payload: newToPay});
 
 
 export default addUsersReducer;

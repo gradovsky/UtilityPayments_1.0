@@ -13,6 +13,7 @@ class ListEnergyContainer extends React.Component {
         this.editEnergy = this.editEnergy.bind(this);
         this.addEnergy = this.addEnergy.bind(this);
         this.reloadEnergyList = this.reloadEnergyList.bind(this);
+        this.usersList = this.usersList.bind(this);
     };
 
     componentDidMount() {
@@ -43,6 +44,16 @@ class ListEnergyContainer extends React.Component {
         this.props.history.push('/add-energy');
     };
 
+
+    usersList() {
+        this.props.history.push('/');
+    }
+
+
+
+
+
+
     render() {
         return (
             <div>
@@ -50,6 +61,7 @@ class ListEnergyContainer extends React.Component {
                             addEnergy={this.addEnergy}
                             editEnergy={this.editEnergy}
                             deleteEnergy={this.deleteEnergy}
+                            usersList={this.usersList}
                 />
             </div>
         );

@@ -19,18 +19,19 @@ class ListEnergy extends React.Component {
         return (
             <div className={s.marginTop}>
                 <Typography variant="h4" className={s.style}>Розрахунок за електроенергію</Typography>
-                <Button variant="contained" color="primary" onClick={this.props.addEnergy}>Додати показник</Button>
+                <Button variant="contained" color="primary" onClick={this.props.usersList}>Список резедентів</Button>
+
+                <p><Button variant="contained" color="primary" onClick={this.props.addEnergy}>Додати показник</Button></p>
 
                 <Table>
                     <TableHead>
                         <TableRow>
                             <TableCell>№</TableCell>
-                            <TableCell align="center">Поточний <p>показник</p></TableCell>
-                            <TableCell align="center">Останній <p>показник</p></TableCell>
-                            <TableCell align="center">Спожито <p>кВт</p></TableCell>
-                            <TableCell align="center">Сума<p>(кВт*1.68)</p></TableCell>
-                            <TableCell align="center">Кількість днів <p>в місяці</p></TableCell>
-                            <TableCell align="center">Ціна енергії <p>за 1 день</p></TableCell>
+                            <TableCell align="center">Поточний показник</TableCell>
+                            <TableCell align="center">Останній показник</TableCell>
+                            <TableCell align="center">Спожито кВт</TableCell>
+                            <TableCell align="center">Сума (кВт*1.68)</TableCell>
+
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -42,8 +43,6 @@ class ListEnergy extends React.Component {
                                     <TableCell align="center">{row.lastValue}</TableCell>
                                     <TableCell align="center">{row.energyUsedKw}</TableCell>
                                     <TableCell align="center">{row.energyPrice}</TableCell>
-                                    <TableCell align="center">{row.countDaysInMonth}</TableCell>
-                                    <TableCell align="center">{row.energyPriceOneDay}</TableCell>
                                     <TableCell align="center"
                                                onClick={() => this.props.editEnergy(row.id)}><CreateIcon/></TableCell>
                                     <TableCell align="center"
@@ -52,8 +51,9 @@ class ListEnergy extends React.Component {
                                 </TableRow>
                             ))}
                     </TableBody>
-                </Table>
 
+                </Table>
+                <div>*Ввести данні в поля <b>"Поточний показник"</b> та <b>"Останній показник"</b> , інші поля виводять обрахунок при кліку.</div>
             </div>
         );
     }

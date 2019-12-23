@@ -19,8 +19,8 @@ class ListOfUsers extends React.Component {
         return (
             <div className={s.marginTop}>
                 <Typography variant="h4" className={s.style}>Резиденти</Typography>
-                <Button variant="contained" color="primary" onClick={this.props.addUser}>Додати резидента</Button>
-                <p><Button variant="contained" color="primary" onClick={this.props.addCalculations}>Додати розрахунки</Button></p>
+                <Button variant="contained" color="primary" onClick={this.props.addCalculations}>Розрахунки</Button>
+                <p><Button variant="contained" color="primary" onClick={this.props.addUser}>Додати резидента</Button></p>
 
                 <Table>
                     <TableHead>
