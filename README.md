@@ -14,7 +14,7 @@ You will also see any lint errors in the console.
 
 ### `npm server`
 
-JSON-server will start on [http://localhost:8080] The data is written to a file db.json in the project directory.
+JSON-server will start on [http://localhost:8080](http://localhost:8080) The data is written to a file db.json in the project directory.
 
 
 
