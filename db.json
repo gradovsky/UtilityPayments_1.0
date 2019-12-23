@@ -10,16 +10,7 @@
       "energyPriceOneDay": "64.624"
     }
   ],
-  "users": [
-    {
-      "userName": "",
-      "daysPresent": "",
-      "priceForEnergy": "",
-      "consta": "",
-      "toPay": "",
-      "id": 1
-    }
-  ],
+  "users": [],
   "receipt": [
     {
       "id": 1,

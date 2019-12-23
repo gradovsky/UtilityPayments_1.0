@@ -111,7 +111,7 @@ export default function PersistentDrawerLeft() {
                     </Typography>
                 </Toolbar>
             </AppBar>
-            <Drawer className={classes.drawer} variant="persistent" anchor="left" open={open}
+            <Drawer  className={classes.drawer} variant="persistent" anchor="left" open={open}
                     classes={{paper: classes.drawerPaper}}
             >
                 <div className={classes.drawerHeader}>
