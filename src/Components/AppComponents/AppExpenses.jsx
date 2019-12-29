@@ -3,7 +3,7 @@ import ListEnergyContainer from "../EnergyComponents/ListEnergy/ListEnergyContai
 import ListReceiptsContainer from "../ConstComponents/ListReceipts/ListReceiptsContainer";
 
 
-const AppCalculations = (props) => {
+const AppExpenses = (props) => {
 
     return (
         <div>
@@ -13,4 +13,4 @@ const AppCalculations = (props) => {
     )
 };
 
-export default AppCalculations;
+export default AppExpenses;

@@ -66,7 +66,6 @@ class EditReceiptContainer extends React.Component {
         this.setState({[e.target.name]: e.target.value});
 
     onChangeTotalAmount(e) {
-
         this.setState({
             [e.target.name]:
             +this.state.centralHeating +

@@ -18,8 +18,6 @@ class ListReceipts extends React.Component {
         return (
             <div className={s.marginTop}>
                 <Typography variant="h4" className={s.style}>Щомісячні послуги по будинку</Typography>
-                <Button variant="contained" color="primary" onClick={this.props.addReceipt}>Додати витрати</Button>
-
                 <Table>
                     <TableHead>
                         <TableRow>
@@ -54,7 +52,7 @@ class ListReceipts extends React.Component {
                             ))}
                     </TableBody>
                 </Table>
-                <div>*Ввести данні по сумах з рахунків або чеків</div>
+                <Button variant="contained" color="primary" onClick={this.props.addExpense}>Додати витрати</Button>
             </div>
         );
     }

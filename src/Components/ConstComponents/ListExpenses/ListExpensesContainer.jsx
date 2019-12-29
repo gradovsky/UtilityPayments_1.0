@@ -11,7 +11,7 @@ class ListReceiptsContainer extends React.Component {
         };
         this.deleteReceipt = this.deleteReceipt.bind(this);
         this.editReceipt = this.editReceipt.bind(this);
-        this.addReceipt = this.addReceipt.bind(this);
+        this.addExpense = this.addExpense.bind(this);
         this.reloadReceiptList = this.reloadReceiptList.bind(this);
     };
 
@@ -38,15 +38,15 @@ class ListReceiptsContainer extends React.Component {
         this.props.history.push('/edit-receipt');
     }
 
-    addReceipt() {
-        this.props.history.push('/add-receipt');
+    addExpense() {
+        this.props.history.push('/add-expense');
     };
 
     render() {
         return (
             <div>
                 <ListReceipts state={this.state}
-                              addReceipt={this.addReceipt}
+                              addExpense={this.addExpense}
                               editReceipt={this.editReceipt}
                               deleteReceipt={this.deleteReceipt}
                 />

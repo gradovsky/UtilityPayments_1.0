@@ -7,7 +7,7 @@ const ADD_CLEANING_PRODUCTS = 'ADD_CLEANING_PRODUCTS';
 const ADD_TOTAL_AMOUNT = 'ADD_TOTAL_AMOUNT';
 
 
-const ConstState = {
+const Expenses = {
     id: '',
     centralHeating: '',
     keepingTheBuilding: '',
@@ -15,11 +15,11 @@ const ConstState = {
     cleaning: '',
     internet: '',
     cleaningProducts: '',
-    totalAmount: ''
+    totalAmountOfReceipts: ''
 };
 
 
-const addReceiptReducer = (state = ConstState, action) => {
+const addExpensesReducer = (state = Expenses, action) => {
     switch (action.type) {
         case ADD_CENTRAL_HEATING: {
             return {...state, centralHeating: action.payload}
@@ -61,12 +61,9 @@ export const addCleaning = (newCleaning) => ({type: ADD_CLEANING, payload: newCl
 
 export const addInternet = (newInternet) => ({type: ADD_INTERNET, payload: newInternet});
 
-export const addCleaningProducts = (newCleaningProducts) => ({
-    type: ADD_CLEANING_PRODUCTS,
-    payload: newCleaningProducts
-});
+export const addCleaningProducts = (newCleaningProducts) => ({type: ADD_CLEANING_PRODUCTS, payload: newCleaningProducts});
 
-export const addTotalAmount = (newTotalAmount) => ({type: ADD_TOTAL_AMOUNT, payload: newTotalAmount});
+export const addTotalAmountOfReceipts = (newTotalAmount) => ({type: ADD_TOTAL_AMOUNT, payload: newTotalAmount});
 
 
-export default addReceiptReducer;
+export default addExpensesReducer;

@@ -7,7 +7,7 @@ import {
     addCleaningProducts,
     addInternet,
     addKeepingTheBuilding,
-    addTotalAmount,
+    addTotalAmountOfReceipts,
     addWater
 } from "../../../redux/receipt-reducer";
 import AddReceipt from "./AddReceipt";
@@ -47,7 +47,7 @@ class AddReceiptContainer extends React.Component {
             cleaning: this.state.cleaning,
             internet: this.state.internet,
             cleaningProducts: this.state.cleaningProducts,
-            totalAmount: this.state.totalAmount
+            totalAmountOfReceipts: this.state.totalAmountOfReceipts
         };
         ReceiptApi.addReceipt(receipts)
             .then(res => {
@@ -85,7 +85,7 @@ class AddReceiptContainer extends React.Component {
         this.setState({[e.target.name]: e.target.value});
     }
     onChangeTotalAmount(e) {
-        this.props.addTotalAmount(e.target.value);
+        this.props.addTotalAmountOfReceipts(e.target.value);
         this.setState({[e.target.name]: +this.state.centralHeating + +this.state.keepingTheBuilding + +this.state.water + +this.state.cleaning + +this.state.internet + +this.state.cleaningProducts});
     }
 
@@ -136,7 +136,7 @@ export const mapDispatchToProps = {
     addCleaning,
     addInternet,
     addCleaningProducts,
-    addTotalAmount
+    addTotalAmountOfReceipts
 };
 
 
