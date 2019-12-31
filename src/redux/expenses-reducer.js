@@ -4,7 +4,6 @@ const ADD_WATER = 'ADD_WATER';
 const ADD_CLEANING = 'ADD_CLEANING';
 const ADD_INTERNET = 'ADD_INTERNET';
 const ADD_CLEANING_PRODUCTS = 'ADD_CLEANING_PRODUCTS';
-const ADD_TOTAL_AMOUNT = 'ADD_TOTAL_AMOUNT';
 
 
 const Expenses = {
@@ -14,8 +13,7 @@ const Expenses = {
     water: '',
     cleaning: '',
     internet: '',
-    cleaningProducts: '',
-    totalAmountOfReceipts: ''
+    cleaningProducts: ''
 };
 
 
@@ -39,9 +37,6 @@ const addExpensesReducer = (state = Expenses, action) => {
         case ADD_CLEANING_PRODUCTS: {
             return {...state, cleaningProducts: action.payload}
         }
-        case ADD_TOTAL_AMOUNT: {
-            return {...state, totalAmount: action.payload}
-        }
         default: {
             return state
         }
@@ -50,10 +45,7 @@ const addExpensesReducer = (state = Expenses, action) => {
 
 export const addCentralHeating = (newCentralHeating) => ({type: ADD_CENTRAL_HEATING, payload: newCentralHeating});
 
-export const addKeepingTheBuilding = (newKeepingTheBuilding) => ({
-    type: ADD_KEEPING_THE_BUILDING,
-    payload: newKeepingTheBuilding
-});
+export const addKeepingTheBuilding = (newKeepingTheBuilding) => ({type: ADD_KEEPING_THE_BUILDING, payload: newKeepingTheBuilding});
 
 export const addWater = (newWater) => ({type: ADD_WATER, payload: newWater});
 
@@ -63,7 +55,6 @@ export const addInternet = (newInternet) => ({type: ADD_INTERNET, payload: newIn
 
 export const addCleaningProducts = (newCleaningProducts) => ({type: ADD_CLEANING_PRODUCTS, payload: newCleaningProducts});
 
-export const addTotalAmountOfReceipts = (newTotalAmount) => ({type: ADD_TOTAL_AMOUNT, payload: newTotalAmount});
 
 
 export default addExpensesReducer;

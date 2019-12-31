@@ -1,7 +1,7 @@
 const ADD_CURRENT_VALUE = 'ADD_CURRENT_VALUE';
 const ADD_LAST_VALUE = 'ADD_LAST_VALUE';
 const ADD_ENERGY_USED_KW = 'ADD_ENERGY_USED_KW';
-const ADD_ENERGY_PRICE = 'CHANGE_ADD_PRICE';
+const ADD_ENERGY_PRICE = 'ADD_ENERGY_PRICE';
 
 
 
@@ -26,10 +26,10 @@ const addEnergyValuesReducer = (state = EnergyState, action) => {
             return {...state, lastValue: action.payload}
         }
         case ADD_ENERGY_USED_KW: {
-            return {...state, energyUsedKw: action.payload}
+            return {...state, energyUsedKw: state.currentValue - state.lastValue}
         }
         case ADD_ENERGY_PRICE: {
-            return {...state, energyPrice: action.payload}
+            return {...state, energyPrice: state.energyUsedKw * 1.68}
         }
         default: {
             return state

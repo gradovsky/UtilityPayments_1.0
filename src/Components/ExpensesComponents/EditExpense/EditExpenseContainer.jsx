@@ -1,9 +1,9 @@
 import React from 'react'
-import {ReceiptApi} from "../../../ApiService/ApiService";
+import {ExpenseApi} from "../../../ApiService/ApiService";
 import {connect} from "react-redux";
-import EditReceipt from "./EditReceipt";
+import EditExpense from "./EditExpense";
 
-class EditReceiptContainer extends React.Component {
+class EditExpenseContainer extends React.Component {
 
     constructor(props) {
         super(props);
@@ -15,21 +15,19 @@ class EditReceiptContainer extends React.Component {
             cleaning: '',
             internet: '',
             cleaningProducts: '',
-            totalAmount: ''
-
+            totalAmountOfExpenses: ''
         };
-        this.saveReceipt = this.saveReceipt.bind(this);
-        this.loadReceipt = this.loadReceipt.bind(this);
+        this.saveExpense = this.saveExpense.bind(this);
+        this.loadExpense = this.loadExpense.bind(this);
         this.onChange = this.onChange.bind(this);
-        this.onChangeTotalAmount = this.onChangeTotalAmount.bind(this);
     }
 
     componentDidMount() {
-        this.loadReceipt();
+        this.loadExpense();
     }
 
-    loadReceipt() {
-        ReceiptApi.fetchReceiptById(window.localStorage.getItem("receiptId"))
+    loadExpense() {
+        ExpenseApi.fetchExpenseById(window.localStorage.getItem("expenseId"))
             .then((res) => {
                 this.setState({
                     id: res.data.id,
@@ -39,14 +37,14 @@ class EditReceiptContainer extends React.Component {
                     cleaning: res.data.cleaning,
                     internet: res.data.internet,
                     cleaningProducts: res.data.cleaningProducts,
-                    totalAmount: res.data.totalAmount
+                    totalAmountOfExpenses: res.data.totalAmountOfExpenses
                 })
             });
     }
 
-    saveReceipt = (e) => {
+    saveExpense = (e) => {
         e.preventDefault();
-        let receipt = {
+        let expense = {
             id: this.state.id,
             centralHeating: this.state.centralHeating,
             keepingTheBuilding: this.state.keepingTheBuilding,
@@ -54,42 +52,29 @@ class EditReceiptContainer extends React.Component {
             internet: this.state.internet,
             cleaning: this.state.cleaning,
             cleaningProducts: this.state.cleaningProducts,
-            totalAmount: this.state.totalAmount
+            totalAmountOfExpenses: this.state.totalAmountOfExpenses
         };
-        ReceiptApi.editReceipt(receipt)
+        ExpenseApi.editExpense(expense)
             .then(res => {
-                this.props.history.push('/calculations');
+                this.props.history.push('/');
             });
     };
 
     onChange = (e) =>
         this.setState({[e.target.name]: e.target.value});
 
-    onChangeTotalAmount(e) {
-        this.setState({
-            [e.target.name]:
-            +this.state.centralHeating +
-            +this.state.keepingTheBuilding +
-            +this.state.water +
-            +this.state.cleaning +
-            +this.state.cleaningProducts
-        });
-    }
-
     render() {
-
         return (
-            <EditReceipt centralHeating={this.state.centralHeating}
+            <EditExpense centralHeating={this.state.centralHeating}
                          keepingTheBuilding={this.state.keepingTheBuilding}
                          water={this.state.water}
                          cleaning={this.state.cleaning}
                          internet={this.state.internet}
                          cleaningProducts={this.state.cleaningProducts}
-                         totalAmount={this.state.totalAmount}
+                         totalAmountOfExpenses={this.state.totalAmountOfExpenses}
 
-                         saveReceipt={this.saveReceipt}
+                         saveExpense={this.saveExpense}
                          onChange={this.onChange}
-                         onChangeTotalAmount={this.onChangeTotalAmount}
             />
         );
     }
@@ -97,13 +82,13 @@ class EditReceiptContainer extends React.Component {
 
 
 export const mapStateToProps = (state) => ({
-    centralHeating: state.receiptAdd.centralHeating,
-    keepingTheBuilding: state.receiptAdd.keepingTheBuilding,
-    water: state.receiptAdd.water,
-    cleaning: state.receiptAdd.cleaning,
-    internet: state.receiptAdd.internet,
-    cleaningProducts: state.receiptAdd.cleaningProducts,
-    totalAmount: state.receiptAdd.totalAmount
+    centralHeating: state.expensesAdd.centralHeating,
+    keepingTheBuilding: state.expensesAdd.keepingTheBuilding,
+    water: state.expensesAdd.water,
+    cleaning: state.expensesAdd.cleaning,
+    internet: state.expensesAdd.internet,
+    cleaningProducts: state.expensesAdd.cleaningProducts,
+    totalAmountOfExpenses: state.expensesAdd.totalAmountOfExpenses
 });
 
-export default connect(mapStateToProps)(EditReceiptContainer)
+export default connect(mapStateToProps)(EditExpenseContainer)

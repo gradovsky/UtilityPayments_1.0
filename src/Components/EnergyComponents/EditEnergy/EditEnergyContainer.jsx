@@ -2,6 +2,7 @@ import React from 'react'
 import {EnergyApi} from "../../../ApiService/ApiService";
 import {connect} from "react-redux";
 import EditEnergy from "./EditEnergy";
+import {addCurrentValue, addEnergyPrice, addEnergyUsedKw, addLastValue} from "../../../redux/energy-reducer";
 
 class EditEnergyContainer extends React.Component {
 
@@ -55,7 +56,7 @@ class EditEnergyContainer extends React.Component {
         };
         EnergyApi.editEnergy(energy)
             .then(res => {
-                this.props.history.push('/calculations');
+                this.props.history.push('/');
             });
     };
 
@@ -75,7 +76,6 @@ class EditEnergyContainer extends React.Component {
     }
 
     render() {
-        console.log(this.state);
         return (
             <EditEnergy currentValue={this.state.currentValue}
                         lastValue={this.state.lastValue}
@@ -102,5 +102,12 @@ export const mapStateToProps = (state) => ({
     energyPriceOneDay: state.energyAdd.energyPriceOneDay
 });
 
+export const mapDispatchToProps = {
+    addCurrentValue,
+    addLastValue,
+    addEnergyUsedKw,
+    addEnergyPrice,
+};
 
-export default connect(mapStateToProps)(EditEnergyContainer)
+
+export default connect(mapStateToProps, mapDispatchToProps)(EditEnergyContainer)

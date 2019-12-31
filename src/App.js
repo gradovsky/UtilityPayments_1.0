@@ -1,18 +1,14 @@
 import React from 'react';
-import NavBar from "./NavBar/NavBar";
-import Container from "@material-ui/core/Container";
+import './App.css';
+import {Container} from "@material-ui/core";
+import AppRouter from "./AppRouter/AppRouter";
 
-
-const App = (props) => {
-
+function App() {
     return (
-        <div>
-            <Container>
-                <NavBar/>
-            </Container>
-        </div>
+        <Container>
+            <AppRouter/>
+        </Container>
     )
-};
-
+}
 
 export default App;

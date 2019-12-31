@@ -1,5 +1,3 @@
-import {EnergyApi} from "../ApiService/ApiService";
-
 const ADD_USER_NAME = 'ADD_USER_NAME';
 const ADD_DAY_PRESENT = 'ADD_DAY_PRESENT';
 const ADD_PRICE_FOR_ENERGY = 'ADD_PRICE_FOR_ENERGY';
@@ -17,9 +15,6 @@ const UserState = {
     energyPriceOneDay:''
 };
 
-
-
-
 const addUsersReducer = (state = UserState, action) => {
     switch (action.type) {
         case ADD_USER_NAME: {
@@ -28,12 +23,10 @@ const addUsersReducer = (state = UserState, action) => {
         case ADD_DAY_PRESENT: {
             return {...state, daysPresent: action.payload}
         }
-
         case ADD_PRICE_FOR_ENERGY: {
             return {
                 ...state, priceForEnergy: action.payload}
         }
-
         case ADD_CONSTA: {
             return {...state, consta: action.payload}
         }

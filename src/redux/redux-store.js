@@ -1,7 +1,7 @@
 import {applyMiddleware, combineReducers, createStore} from 'redux';
 import addEnergyValuesReducer from "./energy-reducer";
 import addUsersReducer from "./users-reducer";
-import addExpensesReducer from "./receipt-reducer";
+import addExpensesReducer from "./expenses-reducer";
 import logger from 'redux-logger'
 
 export const reducers = combineReducers({
@@ -13,4 +13,4 @@ export const reducers = combineReducers({
 export const store = createStore(reducers,applyMiddleware(logger));
 
 
-
+export default store;

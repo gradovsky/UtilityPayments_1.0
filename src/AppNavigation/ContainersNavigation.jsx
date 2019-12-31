@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import ListOfUsersContainer from "../Components/UsersComponents/ListOfUsers/ListOfUsersContainer";
 import ListEnergyContainer from "../Components/EnergyComponents/ListEnergy/ListEnergyContainer";
-import ListExpensesContainer from "../Components/ConstComponents/ListExpenses/ListExpensesContainer";
+import ListExpensesContainer from "../Components/ExpensesComponents/ListExpenses/ListExpensesContainer";
 
 
 function TabPanel(props) {
@@ -41,7 +41,6 @@ function a11yProps(index) {
 }
 
 function LinkTab(props) {
-    console.log(props)
     return (
         <Tab component="a" onClick={event => {
             event.preventDefault()
@@ -69,13 +68,13 @@ export default function NavTabs(props) {
         <div className={classes.root}>
             <AppBar position="static">
                 <Tabs variant="fullWidth" value={value} onChange={handleChange} aria-label="nav tabs example">
-                    <LinkTab label="Список жителів" href="/drafts" {...a11yProps(0)} />
-                    <LinkTab label="Електроенергія" href="/trash" {...a11yProps(1)} />
-                    <LinkTab label="Комунальні витрати" href="/trash" {...a11yProps(2)} />
+                    <LinkTab label="Список жителів" href="/users" {...a11yProps(0)} />
+                    <LinkTab label="Електроенергія" href="/energy" {...a11yProps(1)} />
+                    <LinkTab label="Комунальні витрати" href="/expenses" {...a11yProps(2)} />
                 </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>
-                <ListOfUsersContainer history={props.history}/>
+                <ListOfUsersContainer href="/users" history={props.history}/>
             </TabPanel>
             <TabPanel value={value} index={1}>
                 <ListEnergyContainer history={props.history}/>

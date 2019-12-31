@@ -13,13 +13,13 @@ export const EnergyApi = {
         return instance.post('energy/', energy);
     },
     deleteEnergy(energyId) {
-        return instance.delete('energy/' +  energyId);
+        return instance.delete('energy/' + energyId);
     },
     editEnergy(energy) {
         return instance.put('energy/' + energy.id, energy);
     },
     fetchEnergyById(energyId) {
-        return instance.get('energy/'  + energyId);
+        return instance.get('energy/' + energyId);
     }
 };
 
@@ -31,29 +31,29 @@ export const UsersApi = {
         return instance.post('users/', user);
     },
     deleteUser(userId) {
-        return instance.delete('users/' +  userId);
+        return instance.delete('users/' + userId);
     },
     editUser(user) {
         return instance.put('users/' + user.id, user);
     },
     fetchUserById(userId) {
-        return instance.get('users/'  + userId);
+        return instance.get('users/' + userId);
     }
 };
-export const ReceiptApi = {
-    fetchReceipt() {
-        return instance.get('receipt/');
+export const ExpenseApi = {
+    fetchExpense() {
+        return instance.get('expense/');
     },
-    addReceipt(receipt) {
-        return instance.post('receipt/', receipt);
+    addExpense(expense) {
+        return instance.post('expense/', expense);
     },
-    deleteReceipt(receiptId) {
-        return instance.delete('receipt/' + receiptId);
+    deleteExpense(expenseId) {
+        return instance.delete('expense/' + expenseId);
     },
-    editReceipt(receipt) {
-        return instance.put('receipt/' + receipt.id, receipt);
+    editExpense(expense) {
+        return instance.put('expense/' + expense.id, expense);
     },
-    fetchReceiptById(receiptId) {
-        return instance.get('receipt/'  + receiptId);
+    fetchExpenseById(expenseId) {
+        return instance.get('expense/' + expenseId);
     }
 };

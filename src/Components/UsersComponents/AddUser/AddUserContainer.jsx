@@ -1,5 +1,5 @@
 import React from 'react'
-import {EnergyApi, UsersApi} from "../../../ApiService/ApiService";
+import {UsersApi} from "../../../ApiService/ApiService";
 import {connect} from "react-redux";
 import {addConsta, addDaysPresent, addPriceForEnergy, addToPay, addUserName} from "../../../redux/users-reducer";
 import AddUser from "./AddUser";
@@ -8,43 +8,24 @@ class AddUserContainer extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            id: '',
-            userName: '',
-            daysPresent: '',
-            priceForEnergy: '',
-            consta: '',
-            toPay: '',
-            energyPriceOneDay:''
-        };
+        this.state = {};
         this.saveUser = this.saveUser.bind(this);
         this.onChangeUserName = this.onChangeUserName.bind(this);
         this.onChangeDaysPresent = this.onChangeDaysPresent.bind(this);
         this.onChangePriceForEnergy = this.onChangePriceForEnergy.bind(this);
         this.onChangeConsta = this.onChangeConsta.bind(this);
         this.onChangeToPay = this.onChangeToPay.bind(this);
-        this.loadEnergyPriceOneDay = this.loadEnergyPriceOneDay.bind(this);
-    }
-
-    componentDidMount() {
-        this.loadEnergyPriceOneDay();
-    };
-
-    loadEnergyPriceOneDay() {
-        EnergyApi.fetchEnergy()
-            .then((res) => {
-                this.setState({energyPriceOneDay: res.data[0].energyPriceOneDay})
-            })
     }
 
     saveUser = (e) => {
         e.preventDefault();
         let user = {
-            userName: this.state.userName,
-            daysPresent: this.state.daysPresent,
-            priceForEnergy: this.state.priceForEnergy,
-            consta: this.state.consta,
-            toPay: this.state.toPay
+            userName: this.props.userName,
+            daysPresent: this.props.daysPresent,
+            priceForEnergy: this.props.priceForEnergy,
+            consta: this.props.consta,
+            toPay: this.props.toPay,
+
         };
         UsersApi.addUser(user)
             .then(res => {
@@ -53,35 +34,29 @@ class AddUserContainer extends React.Component {
     };
 
 
-    onChangeUserName (e) {
+
+    onChangeUserName(e) {
         this.props.addUserName(e.target.value);
-        this.setState({[e.target.name]: e.target.value});
     }
 
     onChangeDaysPresent(e) {
         this.props.addDaysPresent(e.target.value);
-        this.setState({[e.target.name]: e.target.value});
     }
 
     onChangePriceForEnergy(e) {
-        this.setState({[e.target.name]: ((this.state.energyPriceOneDay / 2) * this.state.daysPresent).toFixed(3) });
+        this.props.addPriceForEnergy(e.target.value);
     }
 
     onChangeConsta(e) {
         this.props.addConsta(e.target.value);
-        this.setState({[e.target.name]: e.target.value});
     }
 
     onChangeToPay(e) {
         this.props.addToPay(e.target.value);
-        this.setState({[e.target.name]: e.target.value});
     }
 
 
-
-
     render() {
-        console.log(this.state)
         return (
             <div>
                 <AddUser userName={this.state.userName}
@@ -89,7 +64,6 @@ class AddUserContainer extends React.Component {
                          priceForEnergy={this.state.priceForEnergy}
                          consta={this.state.consta}
                          toPay={this.state.toPay}
-
 
                          onChangeUserName={this.onChangeUserName}
                          onChangeDaysPresent={this.onChangeDaysPresent}
@@ -102,7 +76,6 @@ class AddUserContainer extends React.Component {
         );
     }
 }
-
 
 export const mapStateToProps = (state) => ({
     userName: state.usersAdd.userName,

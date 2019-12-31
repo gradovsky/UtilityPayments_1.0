@@ -8,66 +8,43 @@ class AddEnergyContainer extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            currentValue: '',
-            lastValue: '',
-            energyUsedKw: '',
-            energyPrice: '',
-        };
+        this.state = {};
         this.saveEnergy = this.saveEnergy.bind(this);
         this.onChangeCurrentValue = this.onChangeCurrentValue.bind(this);
         this.onChangeLastValue = this.onChangeLastValue.bind(this);
-        this.onChangeEnergyUsedKw = this.onChangeEnergyUsedKw.bind(this);
-        this.onChangeEnergyPrice = this.onChangeEnergyPrice.bind(this);
     }
 
     saveEnergy = (e) => {
         e.preventDefault();
         let energy = {
-            currentValue: this.state.currentValue,
-            lastValue: this.state.lastValue,
-            energyUsedKw: this.state.energyUsedKw,
-            energyPrice: this.state.energyPrice
+            currentValue: this.props.currentValue,
+            lastValue: this.props.lastValue,
+            energyUsedKw: this.props.energyUsedKw,
+            energyPrice: this.props.energyPrice
         };
         EnergyApi.addEnergy(energy)
             .then(res => {
-                this.props.history.push('/calculations');
+                this.props.history.push('/');
             });
 
     };
 
     onChangeCurrentValue(e) {
         this.props.addCurrentValue(e.target.value);
-        this.setState({[e.target.name]: e.target.value});
     }
     onChangeLastValue(e) {
         this.props.addLastValue(e.target.value);
-        this.setState({[e.target.name]: e.target.value});
-    }
-    onChangeEnergyUsedKw(e) {
         this.props.addEnergyUsedKw(e.target.value);
-        this.setState({[e.target.name]: this.state.currentValue - this.state.lastValue});
-    }
-    onChangeEnergyPrice(e){
         this.props.addEnergyPrice(e.target.value);
-        this.setState({[e.target.name]: this.state.energyUsedKw * 1.68});
     }
-
 
     render() {
-        console.log(this.state)
         return (
             <div>
                 <AddEnergy currentValue={this.state.currentValue}
                            lastValue={this.state.lastValue}
-                           energyUsedKw={this.state.energyUsedKw}
-                           energyPrice={this.state.energyPrice}
-
                            onChangeCurrentValue={this.onChangeCurrentValue}
                            onChangeLastValue={this.onChangeLastValue}
-                           onChangeEnergyUsedKw={this.onChangeEnergyUsedKw}
-                           onChangeEnergyPrice={this.onChangeEnergyPrice}
-
                            saveEnergy={this.saveEnergy}
                 />
             </div>
@@ -90,7 +67,6 @@ export const mapDispatchToProps = {
     addEnergyUsedKw,
     addEnergyPrice,
 };
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddEnergyContainer)
 

@@ -8,15 +8,14 @@ import Button from '@material-ui/core/Button';
 import CreateIcon from '@material-ui/icons/Create';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Typography from '@material-ui/core/Typography';
-import s from './ListReceipts.module.css'
+import s from './ListExpenses.module.css'
 
 
-class ListReceipts extends React.Component {
+class ListExpenses extends React.Component {
 
     render() {
-
         return (
-            <div className={s.marginTop}>
+            <div>
                 <Typography variant="h4" className={s.style}>Щомісячні послуги по будинку</Typography>
                 <Table>
                     <TableHead>
@@ -28,12 +27,11 @@ class ListReceipts extends React.Component {
                             <TableCell align="center">Прибирання<br/>грн.</TableCell>
                             <TableCell align="center">Інтернет<br/>грн.</TableCell>
                             <TableCell align="center">Засоби для прибирання<br/>грн.</TableCell>
-                            <TableCell align="center">Загальна сумма<br/>грн.</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         {
-                            this.props.state.receipt.map(row => (
+                            this.props.state.expense.map(row => (
                                 <TableRow key={row.id}>
                                     <TableCell component="th" scope="row">{row.id}</TableCell>
                                     <TableCell align="center">{row.centralHeating}</TableCell>
@@ -42,11 +40,10 @@ class ListReceipts extends React.Component {
                                     <TableCell align="center">{row.cleaning}</TableCell>
                                     <TableCell align="center">{row.internet}</TableCell>
                                     <TableCell align="center">{row.cleaningProducts}</TableCell>
-                                    <TableCell align="center">{row.totalAmount}</TableCell>
                                     <TableCell align="center"
-                                               onClick={() => this.props.editReceipt(row.id)}><CreateIcon/></TableCell>
+                                               onClick={() => this.props.editExpense(row.id)}><CreateIcon/></TableCell>
                                     <TableCell align="center"
-                                               onClick={() => this.props.deleteReceipt(row.id)}><DeleteIcon/></TableCell>
+                                               onClick={() => this.props.deleteExpense(row.id)}><DeleteIcon/></TableCell>
 
                                 </TableRow>
                             ))}
@@ -59,6 +56,4 @@ class ListReceipts extends React.Component {
 
 }
 
-
-
-export default ListReceipts;
+export default ListExpenses;

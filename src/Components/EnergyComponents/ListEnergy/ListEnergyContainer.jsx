@@ -40,7 +40,7 @@ class ListEnergyContainer extends React.Component {
     }
 
     addEnergy() {
-        console.log(this.props.state)
+        console.log(this.props.state);
         this.props.history.push('/add-energy');
     };
 
@@ -48,11 +48,6 @@ class ListEnergyContainer extends React.Component {
     usersList() {
         this.props.history.push('/');
     }
-
-
-
-
-
 
     render() {
         return (
