@@ -39,14 +39,14 @@ class ListOfUsersContainer extends React.Component {
     fetchExpense() {
         ExpensesApi.fetchExpense()
             .then((res) => {
-                this.setState({totalExpenses: res.data[0].totalExpenses})
+                this.setState({totalExpenses: res.data.length ? res.data[0].totalExpenses : 0})
             });
     };
 
     fetchEnergyPrice() {
         EnergyApi.fetchEnergy()
             .then((res) => {
-                this.setState({energyPrice: res.data[0].energyPrice})
+                this.setState({energyPrice: res.data.length ? res.data[0].energyPrice : 0})
             })
     }
 

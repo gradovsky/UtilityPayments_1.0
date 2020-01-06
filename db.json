@@ -1,13 +1,5 @@
 {
-  "energy": [
-    {
-      "id": 1,
-      "currentValue": "74714",
-      "lastValue": "74014",
-      "energyUsedKw": 700,
-      "energyPrice": "1176.00"
-    }
-  ],
+  "energy": [],
   "users": [
     {
       "id": 1,
@@ -75,16 +67,5 @@
       "daysPresent": "30"
     }
   ],
-  "expenses": [
-    {
-      "id": 1,
-      "centralHeating": "285.04",
-      "keepingTheBuilding": "613.31",
-      "water": "67.65",
-      "internet": "100",
-      "cleaning": "900",
-      "cleaningProducts": "150",
-      "totalExpenses": 2116
-    }
-  ]
+  "expenses": []
 }
