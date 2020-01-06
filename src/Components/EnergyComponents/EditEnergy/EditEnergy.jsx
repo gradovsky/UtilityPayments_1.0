@@ -4,48 +4,47 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import s from './EditEnergy.module.css'
 import Container from "@material-ui/core/Container";
+import InputAdornment from "@material-ui/core/InputAdornment";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
 
 class EditEnergy extends Component {
 
     render() {
         return (
-            <Container className={s.marginTop}>
+            <Container maxWidth='md' className={s.marginTop}>
                 <Typography variant="h4" className={s.style}>Редагувати показники</Typography>
                 <form>
-
-                    <TextField type="number"
-                               variant="outlined"
-                               label="Поточний показник"
+                    <TextField label="Поточний показник"
+                               color='secondary'
+                               id="outlined-start-adornment"
                                fullWidth margin="normal"
+                               InputProps={{
+                                   startAdornment: <InputAdornment position="start">кВт</InputAdornment>,
+                               }}
+                               variant="outlined"
                                name="currentValue"
                                value={this.props.currentValue}
-                               onChange={this.props.onChange}/>
+                               onChange={this.props.onChangeCurrentValue}/>
 
-                    <TextField type="number"
-                               variant="outlined"
-                               label="Останній показник"
+
+                    <TextField label="Останній показник"
+                               color='secondary'
+                               id="outlined-start-adornment"
                                fullWidth margin="normal"
+                               InputProps={{
+                                   startAdornment: <InputAdornment position="start">кВт</InputAdornment>,
+                               }}
+                               variant="outlined"
                                name="lastValue"
                                value={this.props.lastValue}
-                               onChange={this.props.onChange}/>
+                               onChange={this.props.onChangeLastValue}/>
 
-                    <TextField type="number"
-                               variant="outlined"
-                               label="Використано електроенергії,кВт"
-                               fullWidth margin="normal"
-                               name="energyUsedKw"
-                               value={this.props.energyUsedKw}
-                               onClick={this.props.onChangeEnergyUsedKw}/>
-
-                    <TextField type="number"
-                               variant="outlined"
-                               label="Вартість електроенергії"
-                               fullWidth margin="normal"
-                               name="energyPrice"
-                               value={this.props.energyPrice}
-                               onClick={this.props.onChangeEnergyPrice}/>
-
-                    <Button variant="contained" color="primary" onClick={this.props.saveEnergy}>Зберегти показники</Button>
+                    <div className={s.centerBtn}>
+                        <ButtonGroup size="large" variant="text" color="primary" aria-label="text primary button group">
+                            <Button onClick={this.props.saveEnergy}>Зберегти</Button>
+                            <Button onClick={this.props.backHome}>Назад</Button>
+                        </ButtonGroup>
+                    </div>
                 </form>
             </Container>
         );

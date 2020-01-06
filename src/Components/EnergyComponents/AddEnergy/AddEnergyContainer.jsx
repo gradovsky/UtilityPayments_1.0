@@ -9,7 +9,6 @@ class AddEnergyContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
-        this.saveEnergy = this.saveEnergy.bind(this);
         this.onChangeCurrentValue = this.onChangeCurrentValue.bind(this);
         this.onChangeLastValue = this.onChangeLastValue.bind(this);
     }
@@ -26,17 +25,23 @@ class AddEnergyContainer extends React.Component {
             .then(res => {
                 this.props.history.push('/');
             });
+    };
 
+    backHome = () => {
+        this.props.history.push('/');
     };
 
     onChangeCurrentValue(e) {
         this.props.addCurrentValue(e.target.value);
-    }
+        this.props.addEnergyUsedKw();
+        this.props.addEnergyPrice();
+    };
+
     onChangeLastValue(e) {
         this.props.addLastValue(e.target.value);
-        this.props.addEnergyUsedKw(e.target.value);
-        this.props.addEnergyPrice(e.target.value);
-    }
+        this.props.addEnergyUsedKw();
+        this.props.addEnergyPrice();
+    };
 
     render() {
         return (
@@ -46,6 +51,8 @@ class AddEnergyContainer extends React.Component {
                            onChangeCurrentValue={this.onChangeCurrentValue}
                            onChangeLastValue={this.onChangeLastValue}
                            saveEnergy={this.saveEnergy}
+                           backHome={this.backHome}
+
                 />
             </div>
         );
@@ -54,7 +61,6 @@ class AddEnergyContainer extends React.Component {
 
 
 export const mapStateToProps = (state) => ({
-    currentDate: state.energyAdd.currentDate,
     currentValue: state.energyAdd.currentValue,
     lastValue: state.energyAdd.lastValue,
     energyUsedKw: state.energyAdd.energyUsedKw,

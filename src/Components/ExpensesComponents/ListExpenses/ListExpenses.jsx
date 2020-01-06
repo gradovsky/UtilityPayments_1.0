@@ -9,37 +9,41 @@ import CreateIcon from '@material-ui/icons/Create';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Typography from '@material-ui/core/Typography';
 import s from './ListExpenses.module.css'
+import Container from "@material-ui/core/Container";
 
 
 class ListExpenses extends React.Component {
 
     render() {
         return (
-            <div>
-                <Typography variant="h4" className={s.style}>Щомісячні послуги по будинку</Typography>
+            <Container maxWidth='lg' className={s.style}>
+                <Typography variant="h4" className={s.text}>БУДИНКОВІ ВИТРАТИ</Typography>
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell>№</TableCell>
+
+                            {/*<TableCell>№</TableCell>*/}
                             <TableCell align="center">Центральне опалення<br/>грн.</TableCell>
                             <TableCell align="center">Утримання будинку<br/>грн.</TableCell>
                             <TableCell align="center">Вода<br/>грн.</TableCell>
                             <TableCell align="center">Прибирання<br/>грн.</TableCell>
                             <TableCell align="center">Інтернет<br/>грн.</TableCell>
                             <TableCell align="center">Засоби для прибирання<br/>грн.</TableCell>
+                            <TableCell align="center"><b>Загальна сумма<br/>грн.</b></TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         {
-                            this.props.state.expense.map(row => (
+                            this.props.state.expenses.map(row => (
                                 <TableRow key={row.id}>
-                                    <TableCell component="th" scope="row">{row.id}</TableCell>
+                                    {/*<TableCell component="th" scope="row">{row.id}</TableCell>*/}
                                     <TableCell align="center">{row.centralHeating}</TableCell>
                                     <TableCell align="center">{row.keepingTheBuilding}</TableCell>
                                     <TableCell align="center">{row.water}</TableCell>
                                     <TableCell align="center">{row.cleaning}</TableCell>
                                     <TableCell align="center">{row.internet}</TableCell>
                                     <TableCell align="center">{row.cleaningProducts}</TableCell>
+                                    <TableCell align="center"><b>{row.totalExpenses}</b></TableCell>
                                     <TableCell align="center"
                                                onClick={() => this.props.editExpense(row.id)}><CreateIcon/></TableCell>
                                     <TableCell align="center"
@@ -49,8 +53,11 @@ class ListExpenses extends React.Component {
                             ))}
                     </TableBody>
                 </Table>
-                <Button variant="contained" color="primary" onClick={this.props.addExpense}>Додати витрати</Button>
-            </div>
+                <div className={s.centerBtn}>
+                    <Button onClick={this.props.addExpense} size="large" variant="text" color="primary"
+                            aria-label="text primary button group">Додати витрати</Button>
+                </div>
+            </Container>
         );
     }
 

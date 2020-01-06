@@ -4,13 +4,13 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import s from './AddExpense.module.css'
 import Container from "@material-ui/core/Container";
-import LinkButton from "../../../AppNavigation/LinkButton";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
 
 class AddExpense extends React.Component {
 
     render() {
         return (
-            <Container className={s.marginTop}>
+            <Container maxWidth='md' className={s.marginTop}>
                 <Typography variant="h4" className={s.style}>Додати витрати</Typography>
                 <form className={s.formContainer}>
 
@@ -23,7 +23,6 @@ class AddExpense extends React.Component {
                                onChange={this.props.onChangeCentralHeating}/>
 
                     <TextField type="number"
-
                                variant="outlined"
                                label="Утримання будинку"
                                fullWidth margin="normal"
@@ -40,7 +39,6 @@ class AddExpense extends React.Component {
                                onChange={this.props.onChangeWater}/>
 
                     <TextField type="number"
-
                                variant="outlined"
                                label="Прибирання"
                                fullWidth margin="normal"
@@ -65,14 +63,16 @@ class AddExpense extends React.Component {
                                onChange={this.props.onChangeCleaningProducts}/>
 
                     <div className={s.centerBtn}>
-                        <p><Button variant="contained" color="primary" onClick={this.props.saveExpense}>Зберегти</Button></p>
-                        <LinkButton to='/'>Назад</LinkButton>
+                        <ButtonGroup size="large" variant="text" color="primary" aria-label="text primary button group">
+                            <Button onClick={this.props.saveExpense}>Зберегти</Button>
+                            <Button onClick={this.props.backHome}>Назад</Button>
+                        </ButtonGroup>
                     </div>
                 </form>
             </Container>
         );
-    }
-}
+    };
+};
 
 export default AddExpense;
 

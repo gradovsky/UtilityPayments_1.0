@@ -3,16 +3,19 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import s from './EditExpense.module.css'
+import Container from "@material-ui/core/Container";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
 
 class EditExpense extends Component {
     render() {
 
         return (
-            <div className={s.marginTop}>
+            <Container maxWidth='md' className={s.marginTop}>
                 <Typography variant="h4" className={s.style}>Редагувати витрати</Typography>
                 <form>
 
                     <TextField type="number"
+                               color='secondary'
                                variant="outlined"
                                label="Центральне опалення"
                                fullWidth margin="normal"
@@ -21,6 +24,7 @@ class EditExpense extends Component {
                                onChange={this.props.onChange}/>
 
                     <TextField type="number"
+                               color='secondary'
                                variant="outlined"
                                label="Утримання будинку"
                                fullWidth margin="normal"
@@ -29,6 +33,7 @@ class EditExpense extends Component {
                                onChange={this.props.onChange}/>
 
                     <TextField type="number"
+                               color='secondary'
                                variant="outlined"
                                label="Вода"
                                fullWidth margin="normal"
@@ -37,6 +42,7 @@ class EditExpense extends Component {
                                onChange={this.props.onChange}/>
 
                     <TextField type="number"
+                               color='secondary'
                                variant="outlined"
                                label="Прибирання"
                                fullWidth margin="normal"
@@ -53,6 +59,7 @@ class EditExpense extends Component {
                                onChange={this.props.onChange}/>
 
                     <TextField type="number"
+                               color='secondary'
                                variant="outlined"
                                label="Засоби для прибирання"
                                fullWidth margin="normal"
@@ -60,10 +67,14 @@ class EditExpense extends Component {
                                value={this.props.cleaningProducts}
                                onChange={this.props.onChange}/>
 
-                    <Button variant="contained" color="primary" onClick={this.props.saveExpense}>Зберегти
-                        витрати</Button>
+                    <div className={s.centerBtn}>
+                        <ButtonGroup size="large" variant="text" color="primary" aria-label="text primary button group">
+                            <Button onClick={this.props.saveExpense}>Зберегти</Button>
+                            <Button onClick={this.props.backHome}>Назад</Button>
+                        </ButtonGroup>
+                    </div>
                 </form>
-            </div>
+            </Container>
         );
     }
 }

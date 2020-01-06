@@ -1,5 +1,5 @@
 import React from 'react'
-import {EnergyApi, UsersApi} from "../../../ApiService/ApiService";
+import {EnergyApi, ExpensesApi, UsersApi} from "../../../ApiService/ApiService";
 import ListOfUsers from "./ListOfUsers";
 
 
@@ -9,48 +9,53 @@ class ListOfUsersContainer extends React.Component {
         super(props);
         this.state = {
             users: [],
-
+            energyPrice: ''
         };
         this.deleteUser = this.deleteUser.bind(this);
         this.editUser = this.editUser.bind(this);
         this.addUser = this.addUser.bind(this);
-        this.addExpense = this.addExpense.bind(this);
-        this.loadUsersList = this.loadUsersList.bind(this);
+        this.fetchUsers = this.fetchUsers.bind(this);
     };
 
     componentDidMount() {
-        this.loadUsersList();
-        this.calculatePriceOneDayOneHuman();
-
+        this.fetchUsers();
+        this.fetchExpense();
     };
 
     componentDidUpdate(nextProps, nextState) {
         if (nextState.users.length !== this.state.users.length) {
-            this.calculateAllPresentDays();
-            this.lol();
+            this.calculateTotalPresentDays();
+            this.fetchEnergyPrice();
         }
     };
 
-    loadUsersList() {
-        return UsersApi.fetchUsers()
+    fetchUsers() {
+        UsersApi.fetchUsers()
             .then((res) => {
                 this.setState({users: res.data})
             });
     };
 
-    calculateAllPresentDays() {
-        let totalPresentDays = 0;
-        this.state.users.forEach(user => totalPresentDays += parseInt(user.daysPresent));
-        this.setState({totalPresentDays: totalPresentDays});
+    fetchExpense() {
+        ExpensesApi.fetchExpense()
+            .then((res) => {
+                this.setState({totalExpenses: res.data[0].totalExpenses})
+            });
     };
 
-    calculatePriceOneDayOneHuman() {
+    fetchEnergyPrice() {
         EnergyApi.fetchEnergy()
             .then((res) => {
-                this.setState({priceOneDayOneHuman: (res.data[0].energyPrice / this.state.totalPresentDays).toFixed(2)})
+                this.setState({energyPrice: res.data[0].energyPrice})
             })
     }
 
+    calculateTotalPresentDays() {
+        let totalPresentDays = this.state.users.reduce((total, days) => {
+            return total += parseInt(days.daysPresent)
+        }, 0);
+        this.setState({totalPresentDays: totalPresentDays});
+    };
 
     addUser() {
         this.props.history.push('/add-user');
@@ -68,43 +73,20 @@ class ListOfUsersContainer extends React.Component {
             })
     };
 
-    addExpense() {
-        this.props.history.push('/expenses');
-    };
-
-    lol() {
-
-       const arr = this.state.users.map( user =>  {
-           return user
-
-       })
-        console.log(arr)
-    }
-
-
-
-
-
-
-
-
-
     render() {
-
         return (
             <div>
                 <ListOfUsers state={this.state}
-                             energyPriceOneDay={this.state.energyPriceOneDay}
+                             energyPrice={this.state.energyPrice}
                              totalPresentDays={this.state.totalPresentDays}
+                             totalExpenses={this.state.totalExpenses}
                              addUser={this.addUser}
                              editUser={this.editUser}
                              deleteUser={this.deleteUser}
-                             addExpense={this.addExpense}
                 />
             </div>
         );
     }
-
 }
 
 export default ListOfUsersContainer;

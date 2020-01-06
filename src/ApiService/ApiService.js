@@ -40,20 +40,20 @@ export const UsersApi = {
         return instance.get('users/' + userId);
     }
 };
-export const ExpenseApi = {
+export const ExpensesApi = {
     fetchExpense() {
-        return instance.get('expense/');
+        return instance.get('expenses/');
     },
     addExpense(expense) {
-        return instance.post('expense/', expense);
+        return instance.post('expenses/', expense);
     },
     deleteExpense(expenseId) {
-        return instance.delete('expense/' + expenseId);
+        return instance.delete('expenses/' + expenseId);
     },
     editExpense(expense) {
-        return instance.put('expense/' + expense.id, expense);
+        return instance.put('expenses/' + expense.id, expense);
     },
     fetchExpenseById(expenseId) {
-        return instance.get('expense/' + expenseId);
+        return instance.get('expenses/' + expenseId);
     }
 };

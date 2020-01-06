@@ -9,7 +9,7 @@ import EditEnergyContainer from "../Components/EnergyComponents/EditEnergy/EditE
 import EditUserContainer from "../Components/UsersComponents/EditUser/EditUserContainer";
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 
-const AppRouter = () => {
+const AppRouter = (props) => {
     return (
         <Container>
             <Router>
@@ -25,6 +25,7 @@ const AppRouter = () => {
                 <Route path="/add-expense" component={AddExpenseContainer}/>
                 <Route path="/edit-expense" component={EditExpenseContainer}/>
             </Router>
+
         </Container>
 
     )

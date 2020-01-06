@@ -1,5 +1,5 @@
 import React from 'react'
-import {ExpenseApi} from "../../../ApiService/ApiService";
+import {ExpensesApi} from "../../../ApiService/ApiService";
 import {connect} from "react-redux";
 import EditExpense from "./EditExpense";
 
@@ -17,8 +17,6 @@ class EditExpenseContainer extends React.Component {
             cleaningProducts: '',
             totalAmountOfExpenses: ''
         };
-        this.saveExpense = this.saveExpense.bind(this);
-        this.loadExpense = this.loadExpense.bind(this);
         this.onChange = this.onChange.bind(this);
     }
 
@@ -27,7 +25,7 @@ class EditExpenseContainer extends React.Component {
     }
 
     loadExpense() {
-        ExpenseApi.fetchExpenseById(window.localStorage.getItem("expenseId"))
+        ExpensesApi.fetchExpenseById(window.localStorage.getItem("expenseId"))
             .then((res) => {
                 this.setState({
                     id: res.data.id,
@@ -52,16 +50,27 @@ class EditExpenseContainer extends React.Component {
             internet: this.state.internet,
             cleaning: this.state.cleaning,
             cleaningProducts: this.state.cleaningProducts,
-            totalAmountOfExpenses: this.state.totalAmountOfExpenses
+            totalExpenses:
+                +this.state.centralHeating +
+                +this.state.keepingTheBuilding +
+                +this.state.water +
+                +this.state.internet +
+                +this.state.cleaning +
+                +this.state.cleaningProducts
         };
-        ExpenseApi.editExpense(expense)
+        ExpensesApi.editExpense(expense)
             .then(res => {
                 this.props.history.push('/');
             });
     };
 
+    backHome = () => {
+        this.props.history.push('/');
+    };
+
     onChange = (e) =>
         this.setState({[e.target.name]: e.target.value});
+
 
     render() {
         return (
@@ -71,9 +80,8 @@ class EditExpenseContainer extends React.Component {
                          cleaning={this.state.cleaning}
                          internet={this.state.internet}
                          cleaningProducts={this.state.cleaningProducts}
-                         totalAmountOfExpenses={this.state.totalAmountOfExpenses}
-
                          saveExpense={this.saveExpense}
+                         backHome={this.backHome}
                          onChange={this.onChange}
             />
         );

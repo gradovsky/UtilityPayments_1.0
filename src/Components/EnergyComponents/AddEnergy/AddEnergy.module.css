@@ -3,7 +3,7 @@
     flex-flow: row wrap
 }
 
-.style {
+.text {
     display: flex;
     justify-content: center
 }

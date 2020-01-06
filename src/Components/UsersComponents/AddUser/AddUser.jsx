@@ -4,14 +4,13 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import s from './AddUser.module.css'
 import Container from "@material-ui/core/Container";
-import LinkButton from "../../../AppNavigation/LinkButton";
-
+import ButtonGroup from "@material-ui/core/ButtonGroup";
 
 class AddUser extends React.Component {
 
     render() {
         return (
-            <Container className={s.marginTop}>
+            <Container maxWidth='md' className={s.marginTop}>
                 <Typography variant="h4" className={s.style}>Додати жителя</Typography>
                 <form className={s.formContainer}>
 
@@ -31,11 +30,12 @@ class AddUser extends React.Component {
                                value={this.props.daysPresent}
                                onChange={this.props.onChangeDaysPresent}/>
 
-                    <div className={s.centerBtn}>
-                        <p><Button variant="contained" color="primary" onClick={this.props.saveUser}>Зберегти</Button></p>
-
-                        <LinkButton to='/'>Назад</LinkButton>
-                    </div>
+                            <div className={s.centerBtn}>
+                                <ButtonGroup size="large" variant="text" color="primary" aria-label="text primary button group">
+                                    <Button onClick={this.props.saveUser}>Зберегти</Button>
+                                    <Button onClick={this.props.backHome}>Назад</Button>
+                                </ButtonGroup>
+                            </div>
                 </form>
             </Container>
         );

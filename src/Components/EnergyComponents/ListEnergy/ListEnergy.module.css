@@ -1,4 +1,15 @@
-.style {
+.text {
+    padding: 20px;
     display: flex;
     justify-content: center;
+}
+.centerBtn {
+    margin-top: 30px;
+    text-align: center;
+}
+.style{
+    background-color: rgba(47, 53, 66,.3);
+    margin: 30px;
+    padding: 30px;
+    border-radius: 10px;
 }

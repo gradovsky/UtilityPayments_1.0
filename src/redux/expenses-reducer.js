@@ -4,6 +4,7 @@ const ADD_WATER = 'ADD_WATER';
 const ADD_CLEANING = 'ADD_CLEANING';
 const ADD_INTERNET = 'ADD_INTERNET';
 const ADD_CLEANING_PRODUCTS = 'ADD_CLEANING_PRODUCTS';
+const CALCULATE_TOTAL_EXPENSES = 'CALCULATE_TOTAL_EXPENSES';
 
 
 const Expenses = {
@@ -13,7 +14,8 @@ const Expenses = {
     water: '',
     cleaning: '',
     internet: '',
-    cleaningProducts: ''
+    cleaningProducts: '',
+    totalExpenses: ''
 };
 
 
@@ -37,6 +39,10 @@ const addExpensesReducer = (state = Expenses, action) => {
         case ADD_CLEANING_PRODUCTS: {
             return {...state, cleaningProducts: action.payload}
         }
+        case CALCULATE_TOTAL_EXPENSES: {
+            return {...state, totalExpenses: +state.centralHeating + +state.keepingTheBuilding + +state.water + +state.cleaning + +state.internet + +state.cleaningProducts}
+        }
+
         default: {
             return state
         }
@@ -54,6 +60,9 @@ export const addCleaning = (newCleaning) => ({type: ADD_CLEANING, payload: newCl
 export const addInternet = (newInternet) => ({type: ADD_INTERNET, payload: newInternet});
 
 export const addCleaningProducts = (newCleaningProducts) => ({type: ADD_CLEANING_PRODUCTS, payload: newCleaningProducts});
+
+export const calculateTotalExpenses = (newTotalExpenses) => ({type: CALCULATE_TOTAL_EXPENSES, payload: newTotalExpenses});
+
 
 
 

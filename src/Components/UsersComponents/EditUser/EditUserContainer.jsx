@@ -15,7 +15,6 @@ class EditUserContainer extends React.Component {
             consta: '',
             toPay: ''
         };
-        this.saveUser = this.saveUser.bind(this);
         this.loadUser = this.loadUser.bind(this);
         this.onChange = this.onChange.bind(this);
     }
@@ -57,16 +56,17 @@ class EditUserContainer extends React.Component {
     onChange = (e) =>
         this.setState({[e.target.name]: e.target.value});
 
+    backHome = () => {
+        this.props.history.push('/');
+    };
 
 
     render() {
         return (
             <EditUser userName={this.state.userName}
                       daysPresent={this.state.daysPresent}
-                      priceForEnergy={this.state.priceForEnergy}
-                      consta={this.state.consta}
-                      toPay={this.state.toPay}
                       saveUser={this.saveUser}
+                      backHome={this.backHome}
                       onChange={this.onChange}
             />
         );

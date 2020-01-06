@@ -1,8 +1,6 @@
 import React from 'react'
 import {EnergyApi} from "../../../ApiService/ApiService";
-import {connect} from "react-redux";
 import EditEnergy from "./EditEnergy";
-import {addCurrentValue, addEnergyPrice, addEnergyUsedKw, addLastValue} from "../../../redux/energy-reducer";
 
 class EditEnergyContainer extends React.Component {
 
@@ -14,19 +12,15 @@ class EditEnergyContainer extends React.Component {
             lastValue: '',
             energyUsedKw: '',
             energyPrice: '',
-
         };
-        this.onChangeEnergyUsedKw = this.onChangeEnergyUsedKw.bind(this);
-        this.onChangeEnergyPrice = this.onChangeEnergyPrice.bind(this);
-        this.onChangeEnergyPriceOneDay = this.onChangeEnergyPriceOneDay.bind(this);
-        this.saveEnergy = this.saveEnergy.bind(this);
-        this.loadEnergy = this.loadEnergy.bind(this);
-        this.onChange = this.onChange.bind(this);
+        this.onChangeCurrentValue = this.onChangeCurrentValue.bind(this);
+        this.onChangeLastValue = this.onChangeLastValue.bind(this);
+
     }
 
     componentDidMount() {
         this.loadEnergy();
-    }
+    };
 
     loadEnergy() {
         EnergyApi.fetchEnergyById(window.localStorage.getItem("energyId"))
@@ -37,11 +31,9 @@ class EditEnergyContainer extends React.Component {
                     lastValue: res.data.lastValue,
                     energyUsedKw: res.data.energyUsedKw,
                     energyPrice: res.data.energyPrice,
-                    countDaysInMonth: res.data.countDaysInMonth,
-                    energyPriceOneDay: res.data.energyPriceOneDay
                 })
             });
-    }
+    };
 
     saveEnergy = (e) => {
         e.preventDefault();
@@ -49,10 +41,8 @@ class EditEnergyContainer extends React.Component {
             id: this.state.id,
             currentValue: this.state.currentValue,
             lastValue: this.state.lastValue,
-            energyUsedKw: this.state.energyUsedKw,
-            energyPrice: this.state.energyPrice,
-            countDaysInMonth: this.state.countDaysInMonth,
-            energyPriceOneDay: this.state.energyPriceOneDay
+            energyUsedKw: this.state.currentValue - this.state.lastValue,
+            energyPrice: ((this.state.currentValue - this.state.lastValue) * 1.68).toFixed(2)
         };
         EnergyApi.editEnergy(energy)
             .then(res => {
@@ -60,54 +50,30 @@ class EditEnergyContainer extends React.Component {
             });
     };
 
-    onChange = (e) =>
-        this.setState({[e.target.name]: e.target.value});
+    backHome = () => {
+        this.props.history.push('/');
+    };
 
-    onChangeEnergyUsedKw(e) {
-        this.setState({[e.target.name]: this.state.currentValue - this.state.lastValue})
-    }
 
-    onChangeEnergyPrice(e) {
-        this.setState({[e.target.name]: this.state.energyUsedKw * 1.68})
-    }
+    onChangeCurrentValue(e) {
+        this.setState({[e.target.name]: e.target.value})
+    };
 
-    onChangeEnergyPriceOneDay(e) {
-        this.setState({[e.target.name]: (this.state.energyPrice / this.state.countDaysInMonth).toFixed(3)})
-    }
+    onChangeLastValue(e) {
+        this.setState({[e.target.name]: e.target.value})
+    };
 
     render() {
         return (
             <EditEnergy currentValue={this.state.currentValue}
                         lastValue={this.state.lastValue}
-                        energyUsedKw={this.state.energyUsedKw}
-                        energyPrice={this.state.energyPrice}
-
-                        onChangeEnergyUsedKw={this.onChangeEnergyUsedKw}
-                        onChangeEnergyPrice={this.onChangeEnergyPrice}
-                        onChangeEnergyPriceOneDay={this.onChangeEnergyPriceOneDay}
+                        onChangeCurrentValue={this.onChangeCurrentValue}
+                        onChangeLastValue={this.onChangeLastValue}
                         saveEnergy={this.saveEnergy}
-                        onChange={this.onChange}
+                        backHome={this.backHome}
             />
         );
-    }
-}
-
-
-export const mapStateToProps = (state) => ({
-    currentValue: state.energyAdd.currentValue,
-    lastValue: state.energyAdd.lastValue,
-    energyUsedKw: state.energyAdd.energyUsedKw,
-    energyPrice: state.energyAdd.energyPrice,
-    countDaysInMonth: state.energyAdd.countDaysInMonth,
-    energyPriceOneDay: state.energyAdd.energyPriceOneDay
-});
-
-export const mapDispatchToProps = {
-    addCurrentValue,
-    addLastValue,
-    addEnergyUsedKw,
-    addEnergyPrice,
+    };
 };
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(EditEnergyContainer)
+export default EditEnergyContainer;

@@ -1,5 +1,5 @@
 import React from 'react'
-import {ExpenseApi} from "../../../ApiService/ApiService";
+import {ExpensesApi} from "../../../ApiService/ApiService";
 import ListExpenses from "./ListExpenses";
 
 class ListExpensesContainer extends React.Component {
@@ -7,7 +7,7 @@ class ListExpensesContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            expense: [],
+            expenses: [],
         };
         this.deleteExpense = this.deleteExpense.bind(this);
         this.editExpense = this.editExpense.bind(this);
@@ -20,18 +20,17 @@ class ListExpensesContainer extends React.Component {
     };
 
 
-
     reloadReceiptList() {
-        ExpenseApi.fetchExpense()
+        ExpensesApi.fetchExpense()
             .then((res) => {
-                this.setState({expense: res.data})
+                this.setState({expenses: res.data})
             });
     };
 
     deleteExpense(expenseId) {
-        ExpenseApi.deleteExpense(expenseId)
+        ExpensesApi.deleteExpense(expenseId)
             .then(res => {
-                this.setState({expense: this.state.expense.filter(expense => expense.id !== expenseId)});
+                this.setState({expenses: this.state.expenses.filter(expense => expense.id !== expenseId)});
             });
     };
 
@@ -46,8 +45,9 @@ class ListExpensesContainer extends React.Component {
 
 
 
+
+
     render() {
-console.log(this.state)
         return (
 
             <div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import {ExpenseApi} from "../../../ApiService/ApiService";
+import {ExpensesApi} from "../../../ApiService/ApiService";
 import {connect} from "react-redux";
 import {
     addCentralHeating,
@@ -7,7 +7,7 @@ import {
     addCleaningProducts,
     addInternet,
     addKeepingTheBuilding,
-    addWater
+    addWater, calculateTotalExpenses
 } from "../../../redux/expenses-reducer";
 import AddExpense from "./AddExpense";
 
@@ -16,7 +16,6 @@ class AddExpenseContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
-        this.saveExpense = this.saveExpense.bind(this);
         this.onChangeCentralHeating = this.onChangeCentralHeating.bind(this);
         this.onChangeKeepingTheBuilding = this.onChangeKeepingTheBuilding.bind(this);
         this.onChangeWater = this.onChangeWater.bind(this);
@@ -35,40 +34,51 @@ class AddExpenseContainer extends React.Component {
             cleaning: this.props.cleaning,
             internet: this.props.internet,
             cleaningProducts: this.props.cleaningProducts,
-            totalAmountOfExpenses: this.props.totalAmountOfExpenses
+            totalExpenses: this.props.totalExpenses
         };
-        ExpenseApi.addExpense(expenses)
+        ExpensesApi.addExpense(expenses)
             .then(res => {
                 this.props.history.push('/');
             });
+    };
 
+    backHome = () => {
+        this.props.history.push('/');
     };
 
     onChangeCentralHeating(e) {
         this.props.addCentralHeating(e.target.value);
+        this.props.calculateTotalExpenses()
     }
 
     onChangeKeepingTheBuilding(e) {
         this.props.addKeepingTheBuilding(e.target.value);
+        this.props.calculateTotalExpenses()
     }
 
     onChangeWater(e) {
         this.props.addWater(e.target.value);
+        this.props.calculateTotalExpenses()
     }
 
     onChangeCleaning(e) {
         this.props.addCleaning(e.target.value);
+        this.props.calculateTotalExpenses()
     }
 
     onChangeInternet(e) {
         this.props.addInternet(e.target.value);
+        this.props.calculateTotalExpenses()
     }
     onChangeCleaningProducts(e) {
         this.props.addCleaningProducts(e.target.value);
-
+        this.props.calculateTotalExpenses()
     }
 
+
+
     render() {
+
         return (
             <div>
                 <AddExpense centralHeating={this.state.centralHeating}
@@ -85,11 +95,12 @@ class AddExpenseContainer extends React.Component {
                             onChangeInternet={this.onChangeInternet}
                             onChangeCleaningProducts={this.onChangeCleaningProducts}
                             saveExpense={this.saveExpense}
+                            backHome={this.backHome}
                 />
             </div>
         );
-    }
-}
+    };
+};
 
 
 export const mapStateToProps = (state) => ({
@@ -99,7 +110,7 @@ export const mapStateToProps = (state) => ({
     cleaning: state.expensesAdd.cleaning,
     internet: state.expensesAdd.internet,
     cleaningProducts: state.expensesAdd.cleaningProducts,
-    totalAmountOfExpenses: state.expensesAdd.totalAmountOfExpenses
+    totalExpenses: state.expensesAdd.totalExpenses
 });
 
 export const mapDispatchToProps = {
@@ -109,6 +120,7 @@ export const mapDispatchToProps = {
     addCleaning,
     addInternet,
     addCleaningProducts,
+    calculateTotalExpenses
 };
 
 

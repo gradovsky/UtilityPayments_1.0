@@ -4,34 +4,44 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import s from './AddEnergy.module.css'
 import {Container} from "@material-ui/core";
-import LinkButton from "../../../AppNavigation/LinkButton";
+import InputAdornment from "@material-ui/core/InputAdornment";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
 
 class AddUserComponent extends React.Component {
 
     render() {
         return (
-            <Container className={s.marginTop}>
-                <Typography variant="h4" className={s.style}>Додати показники</Typography>
+            <Container maxWidth='lg' className={s.marginTop}>
+                <Typography variant="h4" className={s.text}>Додати показники</Typography>
                 <form className={s.formContainer}>
-                    <TextField type="number"
-                               variant="outlined"
-                               label="Поточний показник"
+                    <TextField label="Поточний показник"
+                               id="outlined-start-adornment"
                                fullWidth margin="normal"
+                               InputProps={{
+                                   startAdornment: <InputAdornment position="start">кВт</InputAdornment>,
+                               }}
+                               variant="outlined"
                                name="currentValue"
                                value={this.props.currentValue}
                                onChange={this.props.onChangeCurrentValue}/>
 
-                    <TextField type="number"
-                               variant="outlined"
-                               label="Останній показник"
+
+                    <TextField label="Останній показник"
+                               id="outlined-start-adornment"
                                fullWidth margin="normal"
+                               InputProps={{
+                                   startAdornment: <InputAdornment position="start">кВт</InputAdornment>,
+                               }}
+                               variant="outlined"
                                name="lastValue"
                                value={this.props.lastValue}
                                onChange={this.props.onChangeLastValue}/>
 
                     <div className={s.centerBtn}>
-                        <p><Button variant="contained" color="primary" onClick={this.props.saveEnergy}>Зберегти</Button></p>
-                        <LinkButton to='/'>Назад</LinkButton>
+                        <ButtonGroup size="large" variant="text" color="primary" aria-label="text primary button group">
+                            <Button onClick={this.props.saveEnergy}>Зберегти</Button>
+                            <Button onClick={this.props.backHome}>Назад</Button>
+                        </ButtonGroup>
                     </div>
 
 
