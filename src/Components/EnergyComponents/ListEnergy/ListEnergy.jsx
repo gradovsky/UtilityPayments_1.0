@@ -21,7 +21,6 @@ class ListEnergy extends React.Component {
                 <Table>
                     <TableHead>
                         <TableRow>
-                            {/*<TableCell>№</TableCell>*/}
                             <TableCell align="center">Поточний показник</TableCell>
                             <TableCell align="center">Останній показник</TableCell>
                             <TableCell align="center">Спожито кВт</TableCell>
@@ -32,7 +31,6 @@ class ListEnergy extends React.Component {
                         {
                             this.props.state.energy.map(row => (
                                 <TableRow key={row.id}>
-                                    {/*<TableCell component="th" scope="row">{row.id}</TableCell>*/}
                                     <TableCell align="center">{row.currentValue}</TableCell>
                                     <TableCell align="center">{row.lastValue}</TableCell>
                                     <TableCell align="center">{row.energyUsedKw}</TableCell>
@@ -46,9 +44,15 @@ class ListEnergy extends React.Component {
                     </TableBody>
                 </Table>
                 <div className={s.centerBtn}>
-                    <Button onClick={this.props.addEnergy} size="large" variant="text" color="primary"
-                            aria-label="text primary button group">Додати показник</Button>
-
+                    {
+                        this.props.state.energy.length === 0
+                        ?
+                        <Button onClick={this.props.addEnergy} size="large" variant="text" color="primary">Додати
+                            показник</Button>
+                        :
+                        <Button disabled='true' onClick={this.props.addEnergy} size="large" variant="text"
+                                color="primary">Додати показник</Button>
+                    }
                 </div>
             </Container>
         );

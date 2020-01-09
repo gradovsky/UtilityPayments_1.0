@@ -50,6 +50,7 @@ class ListEnergyContainer extends React.Component {
     }
 
     render() {
+
         return (
             <div>
                 <ListEnergy state={this.state}

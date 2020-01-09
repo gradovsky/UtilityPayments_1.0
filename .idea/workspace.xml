@@ -46,47 +46,96 @@
       <change afterPath="$PROJECT_DIR$/../trash/2aaaaaaaa/.idea/2aaaaaaaa.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../trash/2aaaaaaaa/node_modules/node-releases/.idea/node-releases.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../trash/SocialReact/.idea/SocialReact.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/untitled.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/UtilityPayments_1.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/utility_payments_1.0.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@babel/parser/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@babel/parser/typings/babel-parser.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@babel/types/lib/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@babel/types/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/babel__core/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/babel__core/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/babel__generator/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/babel__generator/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/babel__template/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/babel__template/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/babel__traverse/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/babel__traverse/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/eslint-visitor-keys/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/eslint-visitor-keys/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/istanbul-lib-coverage/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/istanbul-lib-coverage/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/istanbul-lib-report/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/istanbul-lib-report/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/istanbul-reports/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/istanbul-reports/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/json-schema/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/json-schema/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/q/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/q/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/stack-utils/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/stack-utils/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/yargs-parser/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/yargs-parser/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/yargs/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/yargs/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/yargs/yargs.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ApiService/ApiService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppRouter/AppRouter.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/AddEnergy/AddEnergy.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/AddEnergy/AddEnergy.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/AddEnergy/AddEnergyContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/EditEnergy/EditEnergy.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/EditEnergy/EditEnergy.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/EditEnergy/EditEnergyContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergyContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/UsersComponents/AddUser/AddUser.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/UsersComponents/AddUser/AddUser.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/UsersComponents/AddUser/AddUserContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/UsersComponents/EditUser/EditUser.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/UsersComponents/EditUser/EditUserContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsersContainer.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/assets/images/coolBackground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/energy-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/users-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ApiService/ApiService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiService/ApiService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppNavigation/ContainersNavigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppNavigation/ContainersNavigation.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppNavigation/LinkButton.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppRouter/AppRouter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppRouter/AppRouter.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/EnergyComponents/AddEnergy/AddEnergy.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/AddEnergy/AddEnergy.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/EnergyComponents/AddEnergy/AddEnergy.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/AddEnergy/AddEnergy.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/EnergyComponents/AddEnergy/AddEnergyContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/AddEnergy/AddEnergyContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/EnergyComponents/EditEnergy/EditEnergy.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/EditEnergy/EditEnergy.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/EnergyComponents/EditEnergy/EditEnergy.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/EditEnergy/EditEnergy.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/EnergyComponents/EditEnergy/EditEnergyContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/EditEnergy/EditEnergyContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/AppComponents/AppExpenses.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AppComponents/AppExpenses.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergy.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergy.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergy.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergy.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ExpensesComponents/AddExpense/AddExpense.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExpensesComponents/AddExpense/AddExpense.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ExpensesComponents/AddExpense/AddExpenseContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExpensesComponents/AddExpense/AddExpenseContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergyContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergyContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ExpensesComponents/EditExpense/EditExpense.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExpensesComponents/EditExpense/EditExpense.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ExpensesComponents/EditExpense/EditExpense.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExpensesComponents/EditExpense/EditExpense.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ExpensesComponents/EditExpense/EditExpenseContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExpensesComponents/EditExpense/EditExpenseContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ExpensesComponents/ListExpenses/ListExpenses.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExpensesComponents/ListExpenses/ListExpenses.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ExpensesComponents/ListExpenses/ListExpenses.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExpensesComponents/ListExpenses/ListExpenses.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ExpensesComponents/ListExpenses/ListExpensesContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExpensesComponents/ListExpenses/ListExpensesContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/UsersComponents/AddUser/AddUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UsersComponents/AddUser/AddUser.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/UsersComponents/AddUser/AddUserContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UsersComponents/AddUser/AddUserContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/UsersComponents/EditUser/EditEnergy.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UsersComponents/EditUser/EditUser.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/UsersComponents/EditUser/EditUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UsersComponents/EditUser/EditUser.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/UsersComponents/EditUser/EditUserContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UsersComponents/EditUser/EditUserContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsers.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsers.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsers.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsersContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/energy-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/energy-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/expenses-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/expenses-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +168,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="ts.external.directory.path" value="D:\WebStorm 2019.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -190,7 +239,7 @@
       <updated>1575465409672</updated>
       <workItem from="1575465410961" duration="333652000" />
       <workItem from="1577641922519" duration="76235000" />
-      <workItem from="1578143103671" duration="55015000" />
+      <workItem from="1578143103671" duration="67017000" />
     </task>
     <servers />
   </component>

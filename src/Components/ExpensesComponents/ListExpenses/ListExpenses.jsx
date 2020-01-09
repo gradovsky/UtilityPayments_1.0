@@ -54,8 +54,15 @@ class ListExpenses extends React.Component {
                     </TableBody>
                 </Table>
                 <div className={s.centerBtn}>
-                    <Button onClick={this.props.addExpense} size="large" variant="text" color="primary"
-                            aria-label="text primary button group">Додати витрати</Button>
+                    {
+                        this.props.state.expenses.length === 0
+                            ?
+                            <Button onClick={this.props.addExpense} size="large" variant="text" color="primary">Додати
+                                показник</Button>
+                            :
+                            <Button disabled='true' onClick={this.props.addExpense} size="large" variant="text"
+                                    color="primary">Додати показник</Button>
+                    }
                 </div>
             </Container>
         );

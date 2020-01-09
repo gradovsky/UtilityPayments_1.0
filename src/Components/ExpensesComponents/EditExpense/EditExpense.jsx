@@ -51,6 +51,7 @@ class EditExpense extends Component {
                                onChange={this.props.onChange}/>
 
                     <TextField type="number"
+                               color='secondary'
                                variant="outlined"
                                label="Інтернет"
                                fullWidth margin="normal"
