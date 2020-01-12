@@ -7,49 +7,44 @@ import {Container} from "@material-ui/core";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 
-class AddUserComponent extends React.Component {
-
-    render() {
-        return (
-            <Container maxWidth='lg' className={s.marginTop}>
-                <Typography variant="h4" className={s.text}>Додати показники</Typography>
-                <form className={s.formContainer}>
-                    <TextField label="Поточний показник"
-                               id="outlined-start-adornment"
-                               fullWidth margin="normal"
-                               InputProps={{
-                                   startAdornment: <InputAdornment position="start">кВт</InputAdornment>,
-                               }}
-                               variant="outlined"
-                               name="currentValue"
-                               value={this.props.currentValue}
-                               onChange={this.props.onChangeCurrentValue}/>
+const AddUserComponent = (props) => {
+    return (
+        <Container fixed maxWidth='lg' className={s.marginTop}>
+            <Typography variant="h4" className={s.text}>Додати показники</Typography>
+            <form className={s.formContainer}>
+                <TextField label="Поточний показник"
+                           id="outlined-start-adornment"
+                           fullWidth margin="normal"
+                           InputProps={{
+                               startAdornment: <InputAdornment position="start">кВт</InputAdornment>,
+                           }}
+                           variant="outlined"
+                           name="currentValue"
+                           value={props.currentValue}
+                           onChange={props.onChangeCurrentValue}/>
 
 
-                    <TextField label="Останній показник"
-                               id="outlined-start-adornment"
-                               fullWidth margin="normal"
-                               InputProps={{
-                                   startAdornment: <InputAdornment position="start">кВт</InputAdornment>,
-                               }}
-                               variant="outlined"
-                               name="lastValue"
-                               value={this.props.lastValue}
-                               onChange={this.props.onChangeLastValue}/>
+                <TextField label="Останній показник"
+                           id="outlined-start-adornment"
+                           fullWidth margin="normal"
+                           InputProps={{
+                               startAdornment: <InputAdornment position="start">кВт</InputAdornment>,
+                           }}
+                           variant="outlined"
+                           name="lastValue"
+                           value={props.lastValue}
+                           onChange={props.onChangeLastValue}/>
 
-                    <div className={s.centerBtn}>
-                        <ButtonGroup size="large" variant="text" color="primary" aria-label="text primary button group">
-                            <Button onClick={this.props.saveEnergy}>Зберегти</Button>
-                            <Button onClick={this.props.backHome}>Назад</Button>
-                        </ButtonGroup>
-                    </div>
-
-
-                </form>
-            </Container>
-        );
-    }
-}
+                <div className={s.centerBtn}>
+                    <ButtonGroup size="large" variant="text" color="primary" aria-label="text primary button group">
+                        <Button onClick={props.saveEnergy}>Зберегти</Button>
+                        <Button onClick={props.backHome}>Назад</Button>
+                    </ButtonGroup>
+                </div>
+            </form>
+        </Container>
+    );
+};
 
 export default AddUserComponent;
 

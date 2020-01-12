@@ -12,52 +12,48 @@ import Button from "@material-ui/core/Button";
 import {Container} from "@material-ui/core";
 
 
-class ListEnergy extends React.Component {
-
-    render() {
-        return (
-            <Container maxWidth='lg' className={s.style}>
-                <Typography variant="h4" className={s.text}>ЕЛЕКТРОЕНЕРГІЯ</Typography>
-                <Table>
-                    <TableHead>
-                        <TableRow>
-                            <TableCell align="center">Поточний показник</TableCell>
-                            <TableCell align="center">Останній показник</TableCell>
-                            <TableCell align="center">Спожито кВт</TableCell>
-                            <TableCell align="center"><b>Сума (кВт*1.68)</b></TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {
-                            this.props.state.energy.map(row => (
-                                <TableRow key={row.id}>
-                                    <TableCell align="center">{row.currentValue}</TableCell>
-                                    <TableCell align="center">{row.lastValue}</TableCell>
-                                    <TableCell align="center">{row.energyUsedKw}</TableCell>
-                                    <TableCell align="center"><b>{row.energyPrice}</b></TableCell>
-                                    <TableCell align="center"
-                                               onClick={() => this.props.editEnergy(row.id)}><CreateIcon/></TableCell>
-                                    <TableCell align="center"
-                                               onClick={() => this.props.deleteEnergy(row.id)}><DeleteIcon/></TableCell>
-                                </TableRow>
-                            ))}
-                    </TableBody>
-                </Table>
-                <div className={s.centerBtn}>
+const ListEnergy = (props) => {
+    return (
+        <Container maxWidth='lg' className={s.style}>
+            <Typography variant="h4" className={s.text}>ЕЛЕКТРОЕНЕРГІЯ</Typography>
+            <Table>
+                <TableHead>
+                    <TableRow>
+                        <TableCell align="center">Поточний показник</TableCell>
+                        <TableCell align="center">Останній показник</TableCell>
+                        <TableCell align="center">Спожито кВт</TableCell>
+                        <TableCell align="center"><b>Сума (кВт*1.68)</b></TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
                     {
-                        this.props.state.energy.length === 0
+                        props.state.energy.map(row => (
+                            <TableRow key={row.id}>
+                                <TableCell align="center">{row.currentValue}</TableCell>
+                                <TableCell align="center">{row.lastValue}</TableCell>
+                                <TableCell align="center">{row.energyUsedKw}</TableCell>
+                                <TableCell align="center"><b>{row.energyPrice}</b></TableCell>
+                                <TableCell align="center"
+                                           onClick={() => props.editEnergy(row.id)}><CreateIcon/></TableCell>
+                                <TableCell align="center"
+                                           onClick={() => props.deleteEnergy(row.id)}><DeleteIcon/></TableCell>
+                            </TableRow>
+                        ))}
+                </TableBody>
+            </Table>
+            <div className={s.centerBtn}>
+                {
+                    props.state.energy.length === 0
                         ?
-                        <Button onClick={this.props.addEnergy} size="large" variant="text" color="primary">Додати
+                        <Button onClick={props.addEnergy} size="large" variant="text" color="primary">Додати
                             показник</Button>
                         :
-                        <Button disabled='true' onClick={this.props.addEnergy} size="large" variant="text"
+                        <Button disabled='true' onClick={props.addEnergy} size="large" variant="text"
                                 color="primary">Додати показник</Button>
-                    }
-                </div>
-            </Container>
-        );
-    }
-
+                }
+            </div>
+        </Container>
+    );
 }
 
 
