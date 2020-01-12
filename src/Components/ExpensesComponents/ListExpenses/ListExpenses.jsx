@@ -20,7 +20,6 @@ const ListExpenses = (props) =>{
             <Table>
                 <TableHead>
                     <TableRow>
-
                         {/*<TableCell>№</TableCell>*/}
                         <TableCell align="center">Центральне опалення<br/>грн.</TableCell>
                         <TableCell align="center">Утримання будинку<br/>грн.</TableCell>
