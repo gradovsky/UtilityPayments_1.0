@@ -6,11 +6,11 @@ import {Container} from "@material-ui/core";
 const NavBar = (props) => {
 
     return (
-        <Container>
+        <div>
             <ListOfUsersContainer history={props.history}/>
             <ListEnergyContainer history={props.history}/>
             <ListExpensesContainer history={props.history}/>
-        </Container>
+        </div>
 
     );
 };

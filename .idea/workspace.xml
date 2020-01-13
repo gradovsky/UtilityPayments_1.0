@@ -2,137 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32869762-380e-4728-bcb7-7fc43c660241" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../12345/Bandicam v4.5.1.1597 Final Ml_Rus/About the program.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12345/Bandicam v4.5.1.1597 Final Ml_Rus/Bandicam loader by d3adb33f.v2/Loader.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12345/Bandicam v4.5.1.1597 Final Ml_Rus/Bandicam loader by d3adb33f.v2/Readme!!!.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12345/Bandicam v4.5.1.1597 Final Ml_Rus/Bandisoft.Bandicam.v2.3.3.860.Keymaker.Only.MAZE/Read me.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12345/Bandicam v4.5.1.1597 Final Ml_Rus/Bandisoft.Bandicam.v2.3.3.860.Keymaker.Only.MAZE/keymaker.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12345/Bandicam v4.5.1.1597 Final Ml_Rus/Bandisoft.Bandicam.v2.3.3.860.Keymaker.Only.MAZE/keymaker.exe.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12345/Bandicam v4.5.1.1597 Final Ml_Rus/Bandisoft.Bandicam.v2.3.3.860.Keymaker.Only.MAZE/maze.nfo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12345/Bandicam v4.5.1.1597 Final Ml_Rus/bandicam.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12345/Bandicam v4.5.1.1597 Final Ml_Rus/bdcamsetup.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12345/Bandicam v4.5.1.1597 Final Ml_Rus/bdcamsetup.exe.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12345/Bandicam v4.5.1.1597 Final Ml_Rus/Если Bandicam залезла в интернет.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12345/Bandicam v4.5.1.1597 Final Ml_Rus/Процедура лечения.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12345/Bandicam v4.5.1.1597 Final Ml_Rus/Скорректированный русский от Uncle KILLER/Readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12345/Bandicam v4.5.1.1597 Final Ml_Rus/Скорректированный русский от Uncle KILLER/Russian.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PROJECTS/.idea/PROJECTS.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PROJECTS/Bot-node-js/.idea/Bot-node-js.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PROJECTS/Chat/.idea/Chat.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PROJECTS/Chat/node_modules/blob/.idea/blob.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PROJECTS/Chat/node_modules/express-handlebars/.idea/express-handlebars.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PROJECTS/ESP8266nodeJS/.idea/ESP8266nodeJS.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PROJECTS/Math3game/.idea/Math3game.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PROJECTS/TamplateHBS/.idea/OktenWebUniwersity.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PROJECTS/html-markup/.idea/html-markup.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PROJECTS/react/.idea/react.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PROJECTS/socialNode/.idea/socialNode.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PROJECTS/temp/.idea/socialNode.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PROJECTS/test/.idea/test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PROJECTS/test/node_modules/express-handlebars/.idea/express-handlebars.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Program Files/nodejs/node_modules/npm/node_modules/clone/clone.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReactJS-Redux.png" afterDir="false" />
-      <change afterPath="$APPLICATION_HOME_DIR$/plugins/spy-js/server/node_modules/multi-stage-sourcemap/.idea/multi-stage-sourcemap.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../database/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../database/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../database/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../database/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../database/json-server-heroku" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../json-server/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../json-server/json-server-heroku" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node-v10.16.3/deps/npm/node_modules/clone/clone.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node_modules/install/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node_modules/install/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node_modules/install/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node_modules/install/install.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node_modules/install/install.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node_modules/install/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node_modules/install/scripts/docs.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node_modules/install/scripts/prepublish.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trash/2aaaaaaaa/.idea/2aaaaaaaa.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trash/2aaaaaaaa/node_modules/node-releases/.idea/node-releases.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trash/SocialReact/.idea/SocialReact.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/utility_payments_1.0.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@babel/parser/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@babel/parser/typings/babel-parser.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@babel/types/lib/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@babel/types/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/babel__core/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/babel__core/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/babel__generator/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/babel__generator/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/babel__template/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/babel__template/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/babel__traverse/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/babel__traverse/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/eslint-visitor-keys/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/eslint-visitor-keys/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/istanbul-lib-coverage/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/istanbul-lib-coverage/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/istanbul-lib-report/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/istanbul-lib-report/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/istanbul-reports/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/istanbul-reports/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/json-schema/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/json-schema/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/q/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/q/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/stack-utils/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/stack-utils/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/yargs-parser/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/yargs-parser/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/yargs/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/yargs/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/yargs/yargs.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ApiService/ApiService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppRouter/AppRouter.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/AddEnergy/AddEnergy.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/AddEnergy/AddEnergy.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/AddEnergy/AddEnergyContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/EditEnergy/EditEnergy.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/EditEnergy/EditEnergy.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/EditEnergy/EditEnergyContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergy.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergy.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergyContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/UsersComponents/AddUser/AddUser.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/UsersComponents/AddUser/AddUser.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/UsersComponents/AddUser/AddUserContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/UsersComponents/EditUser/EditUser.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/UsersComponents/EditUser/EditUserContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsers.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsers.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsersContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/coolBackground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/energy-reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/users-reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ApiService/ApiService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiService/ApiService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppNavigation/ContainersNavigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppNavigation/ContainersNavigation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergy.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergy.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergy.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergy.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ExpensesComponents/ListExpenses/ListExpenses.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExpensesComponents/ListExpenses/ListExpenses.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ExpensesComponents/ListExpenses/ListExpenses.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExpensesComponents/ListExpenses/ListExpenses.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ExpensesComponents/ListExpenses/ListExpensesContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExpensesComponents/ListExpenses/ListExpensesContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsers.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsers.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsers.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stark-ridge-79566" beforeDir="false" afterPath="$PROJECT_DIR$/stark-ridge-79566" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stark-ridge-79566/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/stark-ridge-79566/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stark-ridge-79566/src/Components/ExpensesComponents/ListExpenses/ListExpenses.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/stark-ridge-79566/src/Components/ExpensesComponents/ListExpenses/ListExpenses.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stark-ridge-79566/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/stark-ridge-79566/src/serviceWorker.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -161,28 +50,28 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="D:\WebStorm 2019.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\utility_payments_1.0\src\assets\images" />
-      <recent name="D:\utility_payments_1.0\src\AppNavigation" />
-      <recent name="D:\utility_payments_1.0\src\AppRouter" />
-      <recent name="D:\utility_payments_1.0\src\Components" />
-      <recent name="D:\utility_payments_1.0\src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\utility_payments_1.0\src" />
       <recent name="D:\utility_payments_1.0\src\libs\fontAweSome" />
       <recent name="D:\utility_payments_1.0\src\libs" />
       <recent name="D:\utility_payments_1.0\src\css" />
       <recent name="D:\utility_payments_1.0\src\Components\AppComponents" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\utility_payments_1.0\src\assets\images" />
+      <recent name="D:\utility_payments_1.0\src\AppNavigation" />
+      <recent name="D:\utility_payments_1.0\src\AppRouter" />
+      <recent name="D:\utility_payments_1.0\src\Components" />
+      <recent name="D:\utility_payments_1.0\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -197,7 +86,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.start">
+    <configuration name="server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="server" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="start" />
@@ -205,6 +104,15 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="npm.start" />
+      <item itemvalue="npm.server" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.server" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -220,7 +128,9 @@
       <workItem from="1577641922519" duration="76235000" />
       <workItem from="1578143103671" duration="73427000" />
       <workItem from="1578566388406" duration="2292000" />
-      <workItem from="1578849581025" duration="3928000" />
+      <workItem from="1578849581025" duration="6113000" />
+      <workItem from="1578910435677" duration="10716000" />
+      <workItem from="1578923156002" duration="4863000" />
     </task>
     <servers />
   </component>
@@ -242,5 +152,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../" />
+    </ignored-roots>
   </component>
 </project>

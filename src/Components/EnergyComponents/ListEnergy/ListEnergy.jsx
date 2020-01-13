@@ -14,14 +14,14 @@ import {Container} from "@material-ui/core";
 
 const ListEnergy = (props) => {
     return (
-        <Container maxWidth='lg' className={s.style}>
-            <Typography variant="h4" className={s.text}>ЕЛЕКТРОЕНЕРГІЯ</Typography>
-            <Table>
+        <Container className={s.container}>
+            <Typography className={s.text} align='center' variant="h6">ЕЛЕКТРОЕНЕРГІЯ</Typography>
+            <Table size='small' padding='checkbox'>
                 <TableHead>
                     <TableRow>
-                        <TableCell align="center">Поточний показник</TableCell>
-                        <TableCell align="center">Останній показник</TableCell>
-                        <TableCell align="center">Спожито кВт</TableCell>
+                        <TableCell align="center">Поточний показник,кВт</TableCell>
+                        <TableCell align="center">Останній показник,кВт</TableCell>
+                        <TableCell align="center">Спожито, кВт</TableCell>
                         <TableCell align="center"><b>Сума (кВт*1.68)</b></TableCell>
                     </TableRow>
                 </TableHead>
@@ -38,23 +38,25 @@ const ListEnergy = (props) => {
                                 <TableCell align="center"
                                            onClick={() => props.deleteEnergy(row.id)}><DeleteIcon/></TableCell>
                             </TableRow>
+
                         ))}
+                    <TableRow>
+                        <TableCell colSpan={7} align="center">
+                            {
+                                props.state.energy.length === 0
+                                    ?
+                                    <Button onClick={props.addEnergy} size="large" variant="outlined" color="secondary">Додати
+                                        показник</Button>
+                                    :
+                                    <div>Розраховано згідно з ввденими даними.Відредагуйте показники якщо є потреба.</div>
+                            }
+                        </TableCell>
+                    </TableRow>
                 </TableBody>
             </Table>
-            <div className={s.centerBtn}>
-                {
-                    props.state.energy.length === 0
-                        ?
-                        <Button onClick={props.addEnergy} size="large" variant="text" color="primary">Додати
-                            показник</Button>
-                        :
-                        <Button disabled='true' onClick={props.addEnergy} size="large" variant="text"
-                                color="primary">Додати показник</Button>
-                }
-            </div>
         </Container>
     );
-}
+};
 
 
 export default ListEnergy;

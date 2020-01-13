@@ -2,7 +2,8 @@ import * as axios from "axios";
 
 const instance = axios.create({
     withCredentials: true,
-    baseURL: 'https://krumska-json-server.herokuapp.com/',
+    baseURL: 'http://localhost:8080/'
+    // baseURL: 'https://krumska-json-server.herokuapp.com/',
 
 });
 export const EnergyApi = {

@@ -1,16 +1,14 @@
 .text {
-    /*padding: 20px;*/
+    padding: 5px;
     display: flex;
     justify-content: center;
+    background: rgba(47, 53, 66,.1);
+    border-radius: 30px;
+
 }
-.centerBtn {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+.container{
+    margin-top: 5px;
+    margin-bottom: 30px;
 }
-.style{
-    background-color: rgba(47, 53, 66,.3);
-    margin: 30px;
-    padding: 30px;
-    border-radius: 10px;
-}
+
+

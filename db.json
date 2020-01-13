@@ -1,45 +1,90 @@
 {
   "energy": [
     {
-      "currentValue": "5000",
-      "lastValue": "3000",
-      "energyUsedKw": 2000,
-      "energyPrice": 3360,
-      "id": 1
+      "id": 1,
+      "currentValue": "74714",
+      "lastValue": "74014",
+      "energyUsedKw": 700,
+      "energyPrice": "1176.00"
     }
   ],
   "users": [
     {
-      "userName": "Дмитро",
-      "daysPresent": "30",
-      "id": 1
+      "id": 1,
+      "userName": "Дарина",
+      "daysPresent": "25"
     },
     {
-      "userName": "Олег",
-      "daysPresent": "22",
-      "id": 2
+      "id": 2,
+      "userName": "Катя",
+      "daysPresent": "21"
     },
     {
-      "userName": "Вася",
-      "daysPresent": "30",
-      "id": 3
+      "id": 3,
+      "userName": "Іван",
+      "daysPresent": "28"
     },
     {
-      "userName": "Дмитро",
-      "daysPresent": "21",
-      "id": 4
+      "id": 4,
+      "userName": "Саша",
+      "daysPresent": "14"
+    },
+    {
+      "id": 5,
+      "userName": "Оля",
+      "daysPresent": "19"
+    },
+    {
+      "id": 6,
+      "userName": "Лола",
+      "daysPresent": "30"
+    },
+    {
+      "id": 7,
+      "userName": "Надя",
+      "daysPresent": "19"
+    },
+    {
+      "id": 8,
+      "userName": "Марія",
+      "daysPresent": "30"
+    },
+    {
+      "id": 9,
+      "userName": "Аня",
+      "daysPresent": "13"
+    },
+    {
+      "id": 10,
+      "userName": "Таня",
+      "daysPresent": "23"
+    },
+    {
+      "id": 11,
+      "userName": "Віка Л.",
+      "daysPresent": "30"
+    },
+    {
+      "id": 12,
+      "userName": "Віка М.",
+      "daysPresent": "22"
+    },
+    {
+      "id": 13,
+      "userName": "Діма",
+      "daysPresent": "30"
     }
   ],
   "expenses": [
     {
-      "centralHeating": "10",
-      "keepingTheBuilding": "20",
-      "water": "30",
-      "cleaning": "40",
-      "internet": "50",
-      "cleaningProducts": "60",
-      "totalExpenses": 210,
-      "id": 1
+      "id": 1,
+      "centralHeating": "285.04",
+      "keepingTheBuilding": "613.31",
+      "water": "67.65",
+      "internet": "100",
+      "cleaning": "900",
+      "cleaningProducts": "150",
+      "totalExpenses": 2116
     }
   ]
 }

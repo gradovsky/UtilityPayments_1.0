@@ -43,10 +43,6 @@ class ListExpensesContainer extends React.Component {
         this.props.history.push('/add-expense');
     };
 
-
-
-
-
     render() {
         return (
 

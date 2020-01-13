@@ -11,37 +11,33 @@ import Typography from '@material-ui/core/Typography';
 import s from './ListExpenses.module.css'
 import Container from "@material-ui/core/Container";
 
-
-const ListExpenses = (props) =>{
+const ListExpenses = (props) => {
     return (
-        <Container maxWidth='lg' className={s.style}>
-            <Typography variant="h4" className={s.text}>БУДИНКОВІ ВИТРАТИ</Typography>
-
-            <Table>
+        <Container className={s.container}>
+            <Typography className={s.text} align='center' variant="h6">БУДИНКОВІ ВИТРАТИ</Typography>
+            <Table size='small' padding='checkbox'>
                 <TableHead>
-                    <TableRow>
-                        {/*<TableCell>№</TableCell>*/}
+                    <TableRow >
                         <TableCell align="center">Центральне опалення<br/>грн.</TableCell>
                         <TableCell align="center">Утримання будинку<br/>грн.</TableCell>
                         <TableCell align="center">Вода<br/>грн.</TableCell>
                         <TableCell align="center">Прибирання<br/>грн.</TableCell>
                         <TableCell align="center">Інтернет<br/>грн.</TableCell>
                         <TableCell align="center">Засоби для прибирання<br/>грн.</TableCell>
-                        <TableCell align="center"><b>Загальна сумма<br/>грн.</b></TableCell>
+                        <TableCell align="center"><b>Загальна сума<br/>грн.</b></TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {
                         props.state.expenses.map(row => (
                             <TableRow key={row.id}>
-                                {/*<TableCell component="th" scope="row">{row.id}</TableCell>*/}
                                 <TableCell align="center">{row.centralHeating}</TableCell>
                                 <TableCell align="center">{row.keepingTheBuilding}</TableCell>
                                 <TableCell align="center">{row.water}</TableCell>
                                 <TableCell align="center">{row.cleaning}</TableCell>
                                 <TableCell align="center">{row.internet}</TableCell>
                                 <TableCell align="center">{row.cleaningProducts}</TableCell>
-                                <TableCell align="center"><b>{row.totalExpenses}</b></TableCell>
+                                <TableCell align="center"><b>{(row.totalExpenses).toFixed(2)}</b></TableCell>
                                 <TableCell align="center"
                                            onClick={() => props.editExpense(row.id)}><CreateIcon/></TableCell>
                                 <TableCell align="center"
@@ -49,21 +45,23 @@ const ListExpenses = (props) =>{
 
                             </TableRow>
                         ))}
+                    <TableRow>
+                        <TableCell colSpan={9} align="center">
+                            {
+                                props.state.expenses.length === 0
+                                    ?
+                                    <Button onClick={props.addExpense} size="large" variant="outlined" color="secondary">Додати
+                                        показник</Button>
+                                    :
+                                    <div>Розраховано згідно з ввденими даними.Відредагуйте витрати якщо є потреба.</div>
+
+                            }
+                        </TableCell>
+                    </TableRow>
                 </TableBody>
             </Table>
-            <div className={s.centerBtn}>
-                {
-                    props.state.expenses.length === 0
-                        ?
-                        <Button onClick={props.addExpense} size="large" variant="text" color="primary">Додати
-                            показник</Button>
-                        :
-                        <Button disabled='true' onClick={props.addExpense} size="large" variant="text"
-                                color="primary">Додати витарати</Button>
-                }
-            </div>
         </Container>
     );
-}
+};
 
 export default ListExpenses;
