@@ -51,6 +51,7 @@ class ListExpensesContainer extends React.Component {
                               addExpense={this.addExpense}
                               editExpense={this.editExpense}
                               deleteExpense={this.deleteExpense}
+                              totalExpenses={this.state.expenses.totalExpenses}
                 />
             </div>
         );

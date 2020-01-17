@@ -2,12 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32869762-380e-4728-bcb7-7fc43c660241" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ApiService/ApiService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiService/ApiService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stark-ridge-79566" beforeDir="false" afterPath="$PROJECT_DIR$/stark-ridge-79566" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stark-ridge-79566/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/stark-ridge-79566/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stark-ridge-79566/src/Components/ExpensesComponents/ListExpenses/ListExpenses.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/stark-ridge-79566/src/Components/ExpensesComponents/ListExpenses/ListExpenses.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stark-ridge-79566/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/stark-ridge-79566/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppNavigation/ContainersNavigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppNavigation/ContainersNavigation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/EnergyComponents/AddEnergy/AddEnergy.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/AddEnergy/AddEnergy.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergy.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergy.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergy.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergy.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergyContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EnergyComponents/ListEnergy/ListEnergyContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ExpensesComponents/ListExpenses/ListExpenses.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExpensesComponents/ListExpenses/ListExpenses.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ExpensesComponents/ListExpenses/ListExpenses.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExpensesComponents/ListExpenses/ListExpenses.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ExpensesComponents/ListExpenses/ListExpensesContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ExpensesComponents/ListExpenses/ListExpensesContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UsersComponents/AddUser/AddUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UsersComponents/AddUser/AddUser.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UsersComponents/AddUser/AddUserContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UsersComponents/AddUser/AddUserContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsers.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsers.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsers.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsersContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/energy-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/energy-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stark-ridge-79566" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,23 +56,23 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="ts.external.directory.path" value="D:\WebStorm 2019.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Кримська, 28\database\json-server-heroku" />
-      <recent name="D:\Кримська, 28\utility_payments_1.0" />
-      <recent name="D:\utility_payments_1.0\src\assets\images" />
-      <recent name="D:\utility_payments_1.0\src\AppNavigation" />
-      <recent name="D:\utility_payments_1.0\src\AppRouter" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\utility_payments_1.0\src" />
       <recent name="D:\utility_payments_1.0\src\libs\fontAweSome" />
       <recent name="D:\utility_payments_1.0\src\libs" />
       <recent name="D:\utility_payments_1.0\src\css" />
       <recent name="D:\utility_payments_1.0\src\Components\AppComponents" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Кримська, 28\database\json-server-heroku" />
+      <recent name="D:\Кримська, 28\utility_payments_1.0" />
+      <recent name="D:\utility_payments_1.0\src\assets\images" />
+      <recent name="D:\utility_payments_1.0\src\AppNavigation" />
+      <recent name="D:\utility_payments_1.0\src\AppRouter" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -72,7 +88,7 @@
     </option>
   </component>
   <component name="RunManager" selected="npm.start">
-    <configuration name="server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="server" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -115,7 +131,9 @@
       <workItem from="1578566388406" duration="2292000" />
       <workItem from="1578849581025" duration="6113000" />
       <workItem from="1578910435677" duration="10716000" />
-      <workItem from="1578923156002" duration="6268000" />
+      <workItem from="1578923156002" duration="19679000" />
+      <workItem from="1579001024546" duration="4405000" />
+      <workItem from="1579023055881" duration="13330000" />
     </task>
     <servers />
   </component>

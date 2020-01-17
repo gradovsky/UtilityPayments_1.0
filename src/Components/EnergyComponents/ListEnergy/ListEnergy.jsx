@@ -48,7 +48,7 @@ const ListEnergy = (props) => {
                                     <Button onClick={props.addEnergy} size="large" variant="outlined" color="secondary">Додати
                                         показник</Button>
                                     :
-                                    <div>Розраховано згідно з ввденими даними.Відредагуйте показники якщо є потреба.</div>
+                                    <React.Fragment>Розраховано згідно з ввденими даними.Відредагуйте показники якщо є потреба.</React.Fragment>
                             }
                         </TableCell>
                     </TableRow>

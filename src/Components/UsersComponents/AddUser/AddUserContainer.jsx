@@ -1,7 +1,14 @@
 import React from 'react'
 import {UsersApi} from "../../../ApiService/ApiService";
 import {connect} from "react-redux";
-import {addDaysPresent, addExpenses, addPriceForEnergy, addToPay, addUserName} from "../../../redux/users-reducer";
+import {
+    addDaysPresent,
+    addExpenses,
+    addFlat,
+    addPriceForEnergy,
+    addToPay,
+    addUserName
+} from "../../../redux/users-reducer";
 import AddUser from "./AddUser";
 
 class AddUserContainer extends React.Component {
@@ -9,6 +16,7 @@ class AddUserContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
+        this.onChangeFlat = this.onChangeFlat.bind(this);
         this.onChangeUserName = this.onChangeUserName.bind(this);
         this.onChangeDaysPresent = this.onChangeDaysPresent.bind(this);
     }
@@ -17,7 +25,8 @@ class AddUserContainer extends React.Component {
         e.preventDefault();
         let user = {
             userName: this.props.userName,
-            daysPresent: this.props.daysPresent
+            daysPresent: this.props.daysPresent,
+            flat: this.props.flat
         };
         UsersApi.addUser(user)
             .then(res => {
@@ -36,12 +45,17 @@ class AddUserContainer extends React.Component {
     onChangeDaysPresent(e) {
         this.props.addDaysPresent(e.target.value);
     };
+    onChangeFlat(e) {
+        this.props.addFlat(e.target.value);
+    };
 
     render() {
         return (
             <div>
                 <AddUser userName={this.state.userName}
                          daysPresent={this.state.daysPresent}
+                         flat={this.state.flat}
+                         onChangeFlat={this.onChangeFlat}
                          onChangeUserName={this.onChangeUserName}
                          onChangeDaysPresent={this.onChangeDaysPresent}
                          saveUser={this.saveUser}
@@ -52,6 +66,7 @@ class AddUserContainer extends React.Component {
 }
 
 export const mapStateToProps = (state) => ({
+    flat: state.usersAdd.flat,
     userName: state.usersAdd.userName,
     daysPresent: state.usersAdd.daysPresent,
     priceForEnergy: state.usersAdd.priceForEnergy,
@@ -61,6 +76,7 @@ export const mapStateToProps = (state) => ({
 });
 
 export const mapDispatchToProps = {
+    addFlat,
     addUserName,
     addDaysPresent,
     addPriceForEnergy,

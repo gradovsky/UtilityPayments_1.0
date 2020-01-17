@@ -13,7 +13,6 @@ const AddUserComponent = (props) => {
             <Typography variant="h4" className={s.text}>Додати показники</Typography>
             <form className={s.formContainer}>
                 <TextField label="Поточний показник"
-                           id="outlined-start-adornment"
                            fullWidth margin="normal"
                            InputProps={{
                                startAdornment: <InputAdornment position="start">кВт</InputAdornment>,
@@ -25,7 +24,6 @@ const AddUserComponent = (props) => {
 
 
                 <TextField label="Останній показник"
-                           id="outlined-start-adornment"
                            fullWidth margin="normal"
                            InputProps={{
                                startAdornment: <InputAdornment position="start">кВт</InputAdornment>,

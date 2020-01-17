@@ -1,6 +1,5 @@
 .text {
-
-    padding: 5px;
+    /*padding: 5px;*/
     display: flex;
     justify-content: center;
     background: rgba(47, 53, 66,.1);
@@ -8,5 +7,5 @@
 }
 
 .container{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }

@@ -25,7 +25,7 @@ const addEnergyValuesReducer = (state = energy, action) => {
             return {...state, energyUsedKw: state.currentValue - state.lastValue}
         }
         case ADD_ENERGY_PRICE: {
-            return {...state, energyPrice: state.energyUsedKw * 1.68}
+            return {...state, energyPrice: (state.energyUsedKw * 1.68).toFixed(2)}
         }
         default: {
             return state

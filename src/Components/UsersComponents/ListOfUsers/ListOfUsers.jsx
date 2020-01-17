@@ -19,6 +19,7 @@ const ListOfUsers = (props) => {
             <Table size='small' padding='checkbox'>
                 <TableHead>
                     <TableRow>
+                        <TableCell align="center">№ кімнати</TableCell>
                         <TableCell align="center">Ім'я</TableCell>
                         <TableCell align="center">Присутні дні</TableCell>
                         <TableCell align="center">Сума за електроенергію</TableCell>
@@ -30,7 +31,8 @@ const ListOfUsers = (props) => {
                     {
                         props.state.users.map(row => (
                             <TableRow key={row.id}>
-                                <TableCell align="left">{row.userName}</TableCell>
+                                <TableCell align="center">{row.flat}</TableCell>
+                                <TableCell align="center">{row.userName}</TableCell>
                                 <TableCell align="center">{row.daysPresent}</TableCell>
                                 <TableCell
                                     align="center">{(energyPriceOneDay * row.daysPresent).toFixed(2)}</TableCell>
@@ -43,11 +45,15 @@ const ListOfUsers = (props) => {
                             </TableRow>
                         ))}
                     <TableRow>
-                        <TableCell colSpan={1}><strong>Сума днів</strong></TableCell>
-                        <TableCell align="center"><strong>{props.totalPresentDays}</strong></TableCell>
+                        <TableCell align="center" ><strong>Загально:</strong></TableCell>
+                        <TableCell rowSpan={1} />
+                        <TableCell align="center" ><strong>{props.totalPresentDays}</strong></TableCell>
+                        <TableCell align="center" ><strong>ENERGY</strong></TableCell>
+                        <TableCell align="center" ><strong>EXPENSES</strong></TableCell>
+                        <TableCell align="center" ><strong>TOTAL</strong></TableCell>
                     </TableRow>
                     <TableRow>
-                        <TableCell colSpan={7} align="center">
+                        <TableCell colSpan={8} align="center">
                             <Button onClick={props.addUser} size="large" variant="outlined" color="secondary">Додати жителя</Button></TableCell>
                     </TableRow>
                 </TableBody>

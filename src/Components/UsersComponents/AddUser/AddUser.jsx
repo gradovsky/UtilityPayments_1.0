@@ -14,6 +14,14 @@ class AddUser extends React.Component {
                 <Typography variant="h4" className={s.style}>Додати жителя</Typography>
                 <form className={s.formContainer}>
 
+                    <TextField type="number"
+                               variant="outlined"
+                               label="Номер кімнати"
+                               fullWidth margin="normal"
+                               name="flat"
+                               value={this.props.flat}
+                               onChange={this.props.onChangeFlat}/>
+
                     <TextField type="text"
                                variant="outlined"
                                label="Ім'я"
@@ -22,7 +30,7 @@ class AddUser extends React.Component {
                                value={this.props.userName}
                                onChange={this.props.onChangeUserName}/>
 
-                    <TextField type="text"
+                    <TextField type="number"
                                variant="outlined"
                                label="Присутні дні"
                                fullWidth margin="normal"

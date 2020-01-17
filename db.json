@@ -2,89 +2,102 @@
   "energy": [
     {
       "id": 1,
-      "currentValue": "74714",
-      "lastValue": "74014",
-      "energyUsedKw": 700,
-      "energyPrice": "1176.00"
+      "currentValue": "77491",
+      "lastValue": "76668",
+      "energyUsedKw": 823,
+      "energyPrice": "1382.64"
     }
   ],
   "users": [
     {
-      "id": 1,
-      "userName": "Дарина",
-      "daysPresent": "25"
+      "userName": "Катруся",
+      "daysPresent": "13",
+      "flat": "1",
+      "id": 1
     },
     {
-      "id": 2,
-      "userName": "Катя",
-      "daysPresent": "21"
-    },
-    {
-      "id": 3,
-      "userName": "Іван",
-      "daysPresent": "28"
-    },
-    {
-      "id": 4,
-      "userName": "Саша",
-      "daysPresent": "14"
-    },
-    {
-      "id": 5,
-      "userName": "Оля",
-      "daysPresent": "19"
-    },
-    {
-      "id": 6,
-      "userName": "Лола",
-      "daysPresent": "30"
-    },
-    {
-      "id": 7,
-      "userName": "Надя",
-      "daysPresent": "19"
-    },
-    {
-      "id": 8,
-      "userName": "Марія",
-      "daysPresent": "30"
-    },
-    {
-      "id": 9,
-      "userName": "Аня",
-      "daysPresent": "13"
-    },
-    {
-      "id": 10,
       "userName": "Таня",
-      "daysPresent": "23"
+      "daysPresent": "30",
+      "flat": "1",
+      "id": 2
     },
     {
-      "id": 11,
-      "userName": "Віка Л.",
-      "daysPresent": "30"
+      "userName": "Іван",
+      "daysPresent": "29",
+      "flat": "2",
+      "id": 3
     },
     {
-      "id": 12,
+      "userName": "Саша",
+      "daysPresent": "26",
+      "flat": "2",
+      "id": 4
+    },
+    {
+      "userName": "Оля",
+      "daysPresent": "11",
+      "flat": "3",
+      "id": 5
+    },
+    {
+      "userName": "Лола",
+      "daysPresent": "31",
+      "flat": "4",
+      "id": 6
+    },
+    {
+      "userName": "Аня",
+      "daysPresent": "26",
+      "flat": "5",
+      "id": 7
+    },
+    {
+      "userName": "Марія",
+      "daysPresent": "31",
+      "flat": "5",
+      "id": 8
+    },
+    {
+      "userName": "Юля",
+      "daysPresent": "19",
+      "flat": "5",
+      "id": 9
+    },
+    {
+      "userName": "Віка Л. ",
+      "daysPresent": "21",
+      "flat": "6",
+      "id": 10
+    },
+    {
       "userName": "Віка М.",
-      "daysPresent": "22"
+      "daysPresent": "23",
+      "flat": "6",
+      "id": 11
     },
     {
-      "id": 13,
+      "userName": "Таня",
+      "daysPresent": "12",
+      "flat": "6",
+      "id": 12
+    },
+    {
       "userName": "Діма",
-      "daysPresent": "30"
+      "daysPresent": "28",
+      "flat": "7",
+      "id": 13
     }
   ],
   "expenses": [
     {
-      "id": 1,
-      "centralHeating": "285.04",
-      "keepingTheBuilding": "613.31",
+      "centralHeating": "2978.56",
+      "keepingTheBuilding": "614.14",
       "water": "67.65",
-      "internet": "100",
       "cleaning": "900",
+      "internet": "100",
       "cleaningProducts": "150",
-      "totalExpenses": 2116
+      "totalExpenses": 4810.35,
+      "id": 1
     }
   ]
 }

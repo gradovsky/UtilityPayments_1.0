@@ -17,14 +17,14 @@ const ListExpenses = (props) => {
             <Typography className={s.text} align='center' variant="h6">БУДИНКОВІ ВИТРАТИ</Typography>
             <Table size='small' padding='checkbox'>
                 <TableHead>
-                    <TableRow >
-                        <TableCell align="center">Центральне опалення<br/>грн.</TableCell>
-                        <TableCell align="center">Утримання будинку<br/>грн.</TableCell>
-                        <TableCell align="center">Вода<br/>грн.</TableCell>
-                        <TableCell align="center">Прибирання<br/>грн.</TableCell>
-                        <TableCell align="center">Інтернет<br/>грн.</TableCell>
-                        <TableCell align="center">Засоби для прибирання<br/>грн.</TableCell>
-                        <TableCell align="center"><b>Загальна сума<br/>грн.</b></TableCell>
+                    <TableRow>
+                        <TableCell align="center">Центральне опалення</TableCell>
+                        <TableCell align="center">Утримання будинку</TableCell>
+                        <TableCell align="center">Вода</TableCell>
+                        <TableCell align="center">Прибирання</TableCell>
+                        <TableCell align="center">Інтернет</TableCell>
+                        <TableCell align="center">Засоби прибирання</TableCell>
+                        <TableCell align="center"><b>Cума</b></TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -42,19 +42,20 @@ const ListExpenses = (props) => {
                                            onClick={() => props.editExpense(row.id)}><CreateIcon/></TableCell>
                                 <TableCell align="center"
                                            onClick={() => props.deleteExpense(row.id)}><DeleteIcon/></TableCell>
-
                             </TableRow>
+
                         ))}
                     <TableRow>
                         <TableCell colSpan={9} align="center">
                             {
                                 props.state.expenses.length === 0
                                     ?
-                                    <Button onClick={props.addExpense} size="large" variant="outlined" color="secondary">Додати
-                                        показник</Button>
+                                    <Button onClick={props.addExpense} size="large" variant="outlined"
+                                            color="secondary">Додати
+                                        витрати</Button>
                                     :
-                                    <div>Розраховано згідно з ввденими даними.Відредагуйте витрати якщо є потреба.</div>
-
+                                    <React.Fragment>Розраховано згідно з ввденими даними.Відредагуйте показники якщо є
+                                        потреба.</React.Fragment>
                             }
                         </TableCell>
                     </TableRow>

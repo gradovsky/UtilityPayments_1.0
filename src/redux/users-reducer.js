@@ -1,3 +1,4 @@
+const ADD_FLAT = 'ADD_FLAT';
 const ADD_USER_NAME = 'ADD_USER_NAME';
 const ADD_DAY_PRESENT = 'ADD_DAY_PRESENT';
 const ADD_PRICE_FOR_ENERGY = 'ADD_PRICE_FOR_ENERGY';
@@ -9,11 +10,15 @@ const UserState = {
     id: '',
     userName: '',
     daysPresent: '',
-    priceForEnergy: ''
+    priceForEnergy: '',
+    flat: ''
 };
 
 const addUsersReducer = (state = UserState, action) => {
     switch (action.type) {
+        case ADD_FLAT: {
+            return {...state, flat: action.payload}
+        }
         case ADD_USER_NAME: {
             return {...state, userName: action.payload}
         }
@@ -35,6 +40,8 @@ const addUsersReducer = (state = UserState, action) => {
         }
     }
 };
+
+export const addFlat = (newFlat) => ({type: ADD_FLAT, payload: newFlat});
 
 export const addUserName = (newUserName) => ({type: ADD_USER_NAME, payload: newUserName});
 
