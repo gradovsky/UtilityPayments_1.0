@@ -8,12 +8,14 @@ import EditExpenseContainer from "../Components/ExpensesComponents/EditExpense/E
 import EditEnergyContainer from "../Components/EnergyComponents/EditEnergy/EditEnergyContainer";
 import EditUserContainer from "../Components/UsersComponents/EditUser/EditUserContainer";
 import {BrowserRouter as Router, Route} from 'react-router-dom'
+import Auth from "../Auth/AuthContainer";
 
 const AppRouter = (props) => {
     return (
         <Container>
             <Router>
                 <Route path="/" exact component={ContainersNavigation}/>
+                <Route path="/login" exact component={Auth}/>
 
                 <Route path="/add-user" component={AddUserContainer}/>
                 <Route path="/edit-user" component={EditUserContainer}/>

@@ -10,7 +10,8 @@ class ListOfUsersContainer extends React.Component {
             users: [],
             energy: [],
             energyPrice: '',
-            totalExpenses: ''
+            totalExpenses: '',
+            totalEnergyPrice: ''
         };
         this.deleteUser = this.deleteUser.bind(this);
         this.editUser = this.editUser.bind(this);
@@ -40,7 +41,7 @@ class ListOfUsersContainer extends React.Component {
     fetchEnergyPrice() {
         EnergyApi.fetchEnergy()
             .then((res) => {
-                this.setState({energyPrice: res.data.length ? res.data[0].energyPrice : null})
+                this.setState({totalEnergyPrice: res.data.length ? res.data[0].energyPrice : null})
             })
     }
 
@@ -81,7 +82,7 @@ console.log(this.state)
         return (
             <div>
                 <ListOfUsers state={this.state}
-                             energyPrice={this.state.energyPrice}
+                             totalEnergyPrice={this.state.totalEnergyPrice}
                              totalPresentDays={this.state.totalPresentDays}
                              totalExpenses={this.state.totalExpenses}
                              addUser={this.addUser}

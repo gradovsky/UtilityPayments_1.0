@@ -12,7 +12,7 @@ import Button from "@material-ui/core/Button";
 import {Container} from "@material-ui/core";
 
 const ListOfUsers = (props) => {
-    let energyPriceOneDay = props.energyPrice / props.totalPresentDays;
+    let energyPriceOneDay = props.totalEnergyPrice / props.totalPresentDays;
     return (
         <Container className={s.container}>
             <Typography className={s.text} align='center' variant='h6'>СПИСОК ЖИТЕЛІВ</Typography>
@@ -48,9 +48,9 @@ const ListOfUsers = (props) => {
                         <TableCell align="center" ><strong>Загально:</strong></TableCell>
                         <TableCell rowSpan={1} />
                         <TableCell align="center" ><strong>{props.totalPresentDays}</strong></TableCell>
-                        <TableCell align="center" ><strong>ENERGY</strong></TableCell>
-                        <TableCell align="center" ><strong>EXPENSES</strong></TableCell>
-                        <TableCell align="center" ><strong>TOTAL</strong></TableCell>
+                        <TableCell align="center" ><strong>{props.totalEnergyPrice}</strong></TableCell>
+                        <TableCell align="center" ><strong>{props.totalExpenses}</strong></TableCell>
+                        <TableCell align="center" ><strong>{(+props.totalEnergyPrice + +props.totalExpenses).toFixed(2)}</strong></TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell colSpan={8} align="center">

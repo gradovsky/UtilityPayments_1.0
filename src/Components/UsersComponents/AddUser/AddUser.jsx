@@ -9,12 +9,21 @@ import ButtonGroup from "@material-ui/core/ButtonGroup";
 class AddUser extends React.Component {
 
     render() {
+
+
+
+
         return (
             <Container maxWidth='md' className={s.marginTop}>
                 <Typography variant="h4" className={s.style}>Додати жителя</Typography>
                 <form className={s.formContainer}>
 
-                    <TextField type="number"
+
+
+
+
+                    <TextField type='number'
+
                                variant="outlined"
                                label="Номер кімнати"
                                fullWidth margin="normal"
@@ -22,13 +31,15 @@ class AddUser extends React.Component {
                                value={this.props.flat}
                                onChange={this.props.onChangeFlat}/>
 
+
                     <TextField type="text"
                                variant="outlined"
                                label="Ім'я"
                                fullWidth margin="normal"
                                name="userName"
                                value={this.props.userName}
-                               onChange={this.props.onChangeUserName}/>
+                               onChange={this.props.onChangeUserName}
+                               />
 
                     <TextField type="number"
                                variant="outlined"
@@ -38,12 +49,12 @@ class AddUser extends React.Component {
                                value={this.props.daysPresent}
                                onChange={this.props.onChangeDaysPresent}/>
 
-                            <div className={s.centerBtn}>
-                                <ButtonGroup size="large" variant="text" color="primary" aria-label="text primary button group">
-                                    <Button onClick={this.props.saveUser}>Зберегти</Button>
-                                    <Button onClick={this.props.backHome}>Назад</Button>
-                                </ButtonGroup>
-                            </div>
+                    <div className={s.centerBtn}>
+                        <ButtonGroup size="large" variant="text" color="primary" aria-label="text primary button group">
+                            <Button onClick={this.props.saveUser}>Зберегти</Button>
+                            <Button onClick={this.props.backHome}>Назад</Button>
+                        </ButtonGroup>
+                    </div>
                 </form>
             </Container>
         );
