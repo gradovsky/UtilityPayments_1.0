@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32869762-380e-4728-bcb7-7fc43c660241" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Auth/Auth.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Auth/AuthContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/Input/Input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/Input/Input.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppRouter/AppRouter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppRouter/AppRouter.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/UsersComponents/AddUser/AddUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UsersComponents/AddUser/AddUser.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsers.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UsersComponents/ListOfUsers/ListOfUsersContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ApiService/ApiService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiService/ApiService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Auth/AuthContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Auth/AuthContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +33,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/ReactJS/SocialNetworkReactJS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -77,7 +69,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.server">
+  <component name="RunManager" selected="npm.start">
     <configuration name="server" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -126,7 +118,11 @@
       <workItem from="1579023055881" duration="14560000" />
       <workItem from="1579542781208" duration="4000" />
       <workItem from="1579544780116" duration="13000" />
-      <workItem from="1579864124407" duration="24479000" />
+      <workItem from="1579864124407" duration="25938000" />
+      <workItem from="1580118336355" duration="5352000" />
+      <workItem from="1580218275271" duration="90000" />
+      <workItem from="1580333566184" duration="873000" />
+      <workItem from="1580334781201" duration="29000" />
     </task>
     <servers />
   </component>

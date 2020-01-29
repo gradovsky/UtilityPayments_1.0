@@ -7,6 +7,7 @@ import is from 'is_js'
 class Auth extends React.Component {
 
     state = {
+        isFormValid: false,
         formControls: {
             email: {
                 value: '',
@@ -23,7 +24,7 @@ class Auth extends React.Component {
             password: {
                 value: '',
                 type: 'password',
-                
+
                 label: 'Пароль',
                 errorMessage: 'Введіть коректний пароль',
                 valid: false,
@@ -73,7 +74,6 @@ class Auth extends React.Component {
     }
 
     onChangeHandler = (event, controlName) => {
-        console.log(`${controlName}: `, event.target.value)
         const formControls = {...this.state.formControls}
         const control = {...formControls[controlName]}
 
@@ -83,8 +83,14 @@ class Auth extends React.Component {
 
         formControls[controlName] = control
 
+        let isFormValid = true;
+
+        Object.keys(formControls).forEach(name => {
+            isFormValid = formControls[name].valid && isFormValid
+        })
+
         this.setState({
-            formControls
+            formControls,isFormValid
         })
     };
 
@@ -118,8 +124,8 @@ class Auth extends React.Component {
 
                     {this.renderInputs()}
 
-                    <Button variant="contained" color="secondary" onClick={this.loginHandler}>Ввійти</Button>
-                    <Button variant="contained" color="primary" onClick={this.registerHandler}>Зареєструватися</Button>
+                    <Button disabled={!this.state.isFormValid} variant="contained" color="secondary" onClick={this.loginHandler}>Ввійти</Button>
+                    <Button disabled={!this.state.isFormValid} variant="contained" color="primary" onClick={this.registerHandler}>Зареєструватися</Button>
                 </form>
             </div>
         )
